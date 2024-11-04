@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{% static 'media/logo-eye.webp' %}" />
+    <link rel="apple-touch-icon" href="{% static 'media/logo-eye.webp' %}" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700"
+      rel="stylesheet"
+    />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/6a2b03ede4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Anamo</title>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="hero">
+        <nav>
+          <a href="#">
+            <img src="{% static 'media/logo.webp' %}" alt="Company Logo" />
+          </a>
+          <div class="scroll-link">
+            <a href="#about" class="link">About</a>
+            <a href="#cdm" class="link">CDM</a>
+            <a href="#solution" class="link">Solution Suite</a>
+            <a href="#partner" class="link">Partners</a>
+            <a href="#faq" class="link">FAQ</a>
+          </div>
+          <a
+            href="https://app.anamo.io/login/?next=/"
+            style="text-decoration: none"
+            passHref
+          >
+            <button aria-label="Login">
+              <i
+                class="fa-solid fa-arrow-right-to-bracket icon"
+                style="color: #fff; font-size: 10px"
+              ></i>
+              Login
+            </button>
+          </a>
+        </nav>
+        <header>
+          <video loop autoplay muted>
+            <source
+              src="https://amorserv-assets.s3.amazonaws.com/amoservtech/v2.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://access-405167844357.s3-accesspoint.us-east-2.amazonaws.com/v3.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="layer"></div>
+          <div class="content">
+            <div class="title">
+              <h1>
+                <span class="header-title">Anamo is CDM,</span>
+                <span class="header-title">A Cybersecurity Platform</span>
+                <span class="header-title">Delivering Continuous,</span>
+                <span class="header-title">Diagnostics, & Mitigation</span>
+              </h1>
+
+              <div class="btns">
+                <a href="https://app.anamo.io/login/" style="text-decoration: none;" target="_blank">
+                  <button>
+                    Get Started <IoIosArrowRoundForward class="icon" />
+                  </button>
+                </a>
+                <a href="https://www.youtube.com/watch?v=BPR_sTWgjPc" style="text-decoration: none;" target="_blank">
+                  <button>
+                    DHS/CDM Video <MdOutlinePlayCircle class="icon" />
+                  </button>
+                </a>
+              </div>
+
+              <ul>
+                <li>Live Dashboard</li>
+                <li>Insider-Threat</li>
+                <li>Vulnerability</li>
+                <li>Permissions</li>
+                <li>Zero Trust</li>
+                <li>Forensics</li>
+              </ul>
+            </div>
+            <div class="desc">
+              <p>
+                ANAMO is the 1st commercially available CDM software platform,
+                built upon a common programming language, which address all
+                major components of the DHS CDM Cybersecurity program. Anamo
+                combines these specific and critical areas of risk management to
+                simplify attack surface management (ASM).
+              </p>
+
+              <div class="btns">
+                <a href="https://app.anamo.io/login/" style="text-decoration: none;" target="_blank">
+                  <button>
+                    Get Started <IoIosArrowRoundForward class="icon" />
+                  </button>
+                </a>
+                <a href="https://www.youtube.com/watch?v=BPR_sTWgjPc" style="text-decoration: none;" target="_blank">
+                  <button>
+                    DHS/CDM Video <MdOutlinePlayCircle class="icon" />
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <div class="partners" id="partner">
+        <div class="inner">
+          <h2><span>Our</span>Partners</h2>
+          <div class="partner-list">
+            <img
+              class="bg"
+              src="{% static 'media/us-pro.webp' %}"
+              alt="USProTech"
+            />
+            <img src="{% static 'media/linux.webp' %}" alt="Linux" />
+            <img
+              class="bg"
+              src="{% static 'media/solaris.webp' %}"
+              alt="Solaris"
+            />
+            <img src="{% static 'media/windows.webp' %}" alt="Windows" />
+            <img
+              class="bg"
+              src="{% static 'media/google-cloud.webp' %}"
+              alt="Google Cloud"
+            />
+            <img src="{% static 'media/aix.webp' %}" alt="AIX" />
+            <img class="bg" src="{% static 'media/azure.webp' %}" alt="Azure" />
+            <img src="{% static 'media/aws.webp' %}" alt="Aws" />
+            <img class="bg" src="{% static 'media/unix.webp' %}" alt="Unix" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about" id="about">
+        <div class="inner">
+          <h2>What makes Anamo Unique?</h2>
+          <p>
+            Anamo CDM, a patent-pending commercial-grade CDM Cybersecurity
+            platform, has answered the call of CISA, the DHS, and other requests
+            from the DoD Supply-Chain.
+          </p>
+
+          <p>
+            Harnessing the power of advanced ML and Generative AI, Anamo CDM is
+            pushing toward the delivery of “Predictive Cybersecurity Threat
+            Extrapolation.” How so? Anamo collects essential User, Group, Risk,
+            Permission, Vulnerability, Software, History, and Forensic data and
+            dynamically delivers that requested information in near Real-Time.
+            Due to the platform service delivery, Anamo has captured broad
+            interest from US- based enterprise businesses and many
+            members/agencies across the US Aerospace and Defense supply chain.
+            Subsequently, Anamo has enjoyed receiving invitations to visits at
+            both the White House and the Pentagon.
+          </p>
+          <div class="content">
+            <img src="{% static 'media/dashboard.webp' %}" alt="Dashboard" />
+          </div>
+        </div>
+      </div>
+
+      <div class="cdm" id="cdm">
+        <div class="inner">
+          <div class="unparalled">
+            <h2>Anamo CDM - Unparalleled</h2>
+            <p>
+              Anamo, commercial businesses and the US Government desire a
+              functional ability that can present the most important security
+              data to active dashboards. This functionality is ideal and
+              provides a process to elevate resource allocations and define
+              remediation priorities within their respective divisions and to
+              the appropriate staff and authorities. CDM is simply superior
+              Cybersecurity and Anamo CDM is the leading commercial solution.
+            </p>
+
+            <a href="" class="link"
+              >Who are the over 100 US Federal Agencies that have already
+              deployed CDM as a core capability of their Cybersecurity Defense
+              program?</a
+            >
+
+            <p>
+              Anamo is 24/7/365: In near Real-Time and On-Demand, Anamo CDM
+              delivers a cross-section of many of the best Cybersecurity
+              attributes and capabilities of industry verticals including:
+            </p>
+
+            <ul>
+              <li>SIEM – Security Incident Event Management</li>
+              <li>EDR – Endpoint Detection & Response</li>
+              <li>ASM - Attack Surface Management</li>
+              <li>Vul-Scan - CVE Vulnerability Scanning</li>
+              <li>EPP - Endpoint Protection</li>
+              <li>BA - Behavior Awareness</li>
+            </ul>
+
+            <p class="click">
+              <a class="link" href="">Click here</a>to get answers to your CDM
+              program questions directly from CISA and the DHS
+            </p>
+          </div>
+          <div class="what-is-cdm">
+            <h2>What is CDM?</h2>
+
+            <p>
+              The Continuous Diagnostics and Mitigation (CDM) Program provides a
+              dynamic approach to fortifying the cybersecurity capabilities of
+              businesses and government agencies and the networks and systems
+              that they manage and protect. CDM was created by the U.S.
+              Department of Homeland Security and is a critical security
+              component of CISA (Cybersecurity and Infrastructure Security
+              Agency) of the United States of America.
+            </p>
+
+            <p>
+              The DHS and CISA created the multi-billion-dollar CDM program in
+              an effort to assemble critical Cybersecurity risk information and
+              logically display various categories to certain Dashboards in as
+              close to real-time as possible.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="solution" id="solution">
+        <div class="inner">
+          <h2>Comprehensive Cybersecurity Solution suite</h2>
+          <div class="nav-content">
+            <div class="nav">
+              <span id="one"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Insider Threat</span>
+              </span>
+              <span id="two"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Forensics & Software</span>
+              </span>
+              <span id="three"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Real Time Dashboard</span>
+              </span>
+              <span id="four"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Software Vulnerabilities</span>
+              </span>
+              <span id="five"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Forensics & Permissions</span>
+              </span>
+              <span id="six"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Anamo ZTA and GRC Administraion</span>
+              </span>
+              <span id="seven"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Zero Trust Administration and Anamo</span>
+              </span>
+              <span id="eight"
+                ><i class="fa-regular fa-paper-plane icon"></i>
+                <span>Comprehensive Remediation Reporting</span>
+              </span>
+            </div>
+
+            <div class="contents">
+              <div class="content one">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution1.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    The one constant in Cybersecurity is the need for deep
+                    forensic data collection. Sadly, most cybersecurity products
+                    gravely lack an ability to identify, collect, or understand
+                    the significance of such data collection. An example of
+                    “struggling” can be found with those who have enabled
+                    logging within their systems but ignore the vast quantities
+                    of alert notifications, likening them to white noise. Anamo
+                    solves this dilemma by allowing for customization as several
+                    levels… but more importantly, Anamo understand exactly what
+                    Forensic Information is essential to enable the InfoSec Team
+                    to pinpoint an exact event, transaction, date, time, by
+                    device, etc.
+                  </p>
+                  <p>
+                    One example of essential forensic data collection that Anamo
+                    excels in would be the attributes of Users and Groups
+                    Permissions.
+                  </p>
+                  <p>
+                    First, Anamo automatically gathers all associations of users
+                    and groups permissions regardless of what Operation System
+                    (OS) that they use (Windows or Linux). Anamo then
+                    automatically present both OS’s permission in their native
+                    format (numeric or symbolic) and allows the InfoSec
+                    administrator several options to interrogate such as hosts,
+                    path, etc.
+                  </p>
+                  <p>
+                    Anamo goes further than that and tracks even the most subtle
+                    permission changes and offers the Admin their choice of how
+                    quickly such an event would generate an alarm. In short,
+                    Anamo autonomously gathers the data and delivers deep
+                    forensic tracking to the Admins and displays both Data and
+                    Alerts logically for remediation and investigative purposes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="content two">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution2.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    Anamo Software Forensics enable InfoSec teams to quickly
+                    identify any protected system (by OS), by Name, by Type, by
+                    Version (Old &amp; New), Creation Date, by Action, and other
+                    historical data based upon any selected timeframe over a
+                    variety of other different criteria.
+                  </p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="content three">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution3.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    It almost sounds like Anamo solved the puzzle that has
+                    haunted the IT InfoSec Team for ages.
+                  </p>
+                  <p>
+                    You know the question, the one where people ask, “And then…
+                    what do we do with those Logs?” In reality, Logs serve an
+                    important purpose but unfortunately, they do so after the
+                    fact. Anamo understands what the purpose of Logs are, but
+                    rather than collecting them (which is always a good idea),
+                    Anamo interprets the meaning, actions, and behavior of the
+                    User (or Group) to essentially monitor, notify, and alert
+                    Admins to the actions of a Technical-Adversary (Authorized
+                    or not) who might be categorized as a suspicious or bad
+                    actor. Today, that problem is solved through the ingenious
+                    and tastefully presented user interface that does not
+                    require a computer science degree to immediately gain the
+                    gist and detail that has been woven into the Anamo fabric.
+                  </p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="content four">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution4.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    Anamo is continuous diagnostics and mitigation, it delivers
+                    “always-on” vulnerability assessment scanning and no
+                    competitor can scan as often or as deeply as Anamo. There
+                    are many types of “external scanners”, but they are not
+                    behind the firewall and limited to the type of data that the
+                    scanner can collect, this limitation leaves the customer
+                    with (potentially) knowing the problem but without the
+                    essential ability to receive remediation validation in
+                    real-time. VM (Virtual-Machine) based Nodes are also able to
+                    scan for CVE’s and are able to evaluate a client
+                    vulnerability risk posture more rapidly than external
+                    scanners; however, they all remain limited in their ability
+                    to gather critical and essential data for decision-makers in
+                    real-time. VM’s do not reside within the Host and therefore
+                    cannot gather the same deep-seeded OS Level information that
+                    the Anamo Agent continuously gathers 24/7/365.
+                  </p>
+                  <p>
+                    Easily identifiable differentiators: Scanners cannot see
+                    beyond a named software and have zero insight into the
+                    packages that make up the software. VM’s – posing as
+                    internal scanning node are not agent-based, an extremely
+                    limited purview into a devices operating system, but they
+                    can reach limited information from more devices without an
+                    Agent. The Anamo Agent sits directly upon the protected
+                    system and is intimately knowledgeable with nearly every
+                    single attribute and possible attack vector far beyond
+                    software and all the way down to a user, their permissions,
+                    and subsequent behavioral modifications.
+                  </p>
+                  <p>
+                    Results: Remediation efforts in Anamo can be seen and
+                    verified by the InfoSec Admin Team in near Real-Time, no
+                    more waiting a month for or the next scan to evaluate an
+                    outdated Report.
+                  </p>
+                  <p>
+                    Example: Anamo automatically separates software
+                    vulnerability by OS, Kernel, Package, System, NVD allocated
+                    Score, Severity, Risk, Exploitability, and much, much more.
+                  </p>
+                </div>
+              </div>
+
+              <div class="content five">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution5.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    Anamo is the answer to identifying a Technical Adversary and
+                    delivers the critical data needed to effectively eliminate
+                    the Dwell-Time of an attacker.
+                  </p>
+                  <p>
+                    Anamo CDM provides an AI and ML-driven SaaS that is
+                    disrupting the classic and stagnated Cybersecurity-Silos of
+                    old such as Endpoint Protection Platforms (EPP), Endpoint
+                    Detection and Remediation (EDR), Attack Surface Management
+                    (ASM), Software Vulnerability Management (SVM), and Security
+                    Event Incident Management (SIEM), just to name a few. While
+                    Anamo isn’t a Silver-Bullet for every Cybersecurity
+                    challenge, one look through any of the Gartner Reports (see
+                    embedded links) will show that Anamo merges many of the best
+                    attributes of these aforementioned security functions into a
+                    single platform and delivers a comprehensive, user-friendly,
+                    and financially attractive entry-point and value proposition
+                    that legacy platforms simply cannot compete with.
+                  </p>
+                  <p>
+                    Contact Sales at Anamo to learn just how affordable CDM can
+                    be for you!
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="content six">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution6.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    Anamo knew that no other software product could deliver
+                    risk-rated software CVE analytics with remediation
+                    recommendations on both Windows and Linux Operating Systems,
+                    and at the same time separated and categorized those
+                    vulnerabilities by Host , Version, Build, Package, OS,
+                    Kernel, Impact, and Score all on the same page. So Anamo
+                    built that. But that wasn’t going to be enough for Anamo
+                    customers, clients wanted deep software and historical
+                    forensics with data analytics, along with transaction
+                    history, and they demanded that the information be
+                    constantly updated and delivered to an active dashboard in
+                    near real-time. So Anamo did that too!
+                  </p>
+                  <p></p>
+                  <p>
+                    Subsequently, Anamo built the entire SaaS platform on a
+                    single set of robust, and scalable programming languages
+                    that is offered today in three flavors:
+                  </p>
+                  <ol>
+                    <li>
+                      <h3>Fundamental</h3>
+                      <p>
+                        Built for LAN Administration for Workstations, PC’s,
+                        etc.
+                      </p>
+                    </li>
+                    <li>
+                      <h3>Professional</h3>
+                      <p>
+                        Built for Wan Administrators with complex Multi-OS
+                        Server farms.
+                      </p>
+                    </li>
+                    <li>
+                      <h3>Enterprise</h3>
+                      <p>Built for both LAN and WAN Administration.</p>
+                    </li>
+                  </ol>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="content seven">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution7.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    Seeking the ability to effectively deploy a ZTA capability?
+                  </p>
+                  <p>
+                    Before one can anticipate achieving ZTA with any platform or
+                    service, entities will first require the initial ability to
+                    gather and understand correlated data. These trust
+                    indicators should include, at a minimum, Cybersecurity risk
+                    data related to identity attributes concerning Users,
+                    Groups, Port, and Permissions, all in an effort to ensure
+                    that they have correct and robust data forensics gathering
+                    capability for validation and verification purposes.
+                  </p>
+                  <p>
+                    Anamo is essentially your trusted 3rd party validation
+                    system to any ZTA effort and provides the essential data
+                    sets needed to operationally validate a working ZTA system.
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+
+              <div class="content eight">
+                <div class="img-container">
+                  <img
+                    src="{% static 'media/solution8.webp' %}"
+                    alt="Content Image"
+                  />
+                  <i class="fa-solid fa-xmark icon"></i>
+                </div>
+                <div class="details">
+                  <p>
+                    If you represent a DoD supply chain operator or have a
+                    federal regulatory compliance requirement such as CMMC, NIST
+                    800, HIPAA, or SOX, you’ll feel right at home and
+                    well-accommodated by enhancing the ZTA program with Anamo
+                    CDM.
+                  </p>
+                  <p>
+                    Simply stated, ZTA is a multi-faceted aspect of
+                    Cybersecurity which includes a clear understanding and the
+                    ability to track each and every User or Group of Users IDs
+                    within select computing systems. At a highly granular-level,
+                    Anamo tracks, documents, and even alerts InfoSec team
+                    members of any modifications of individuals, groups, ports,
+                    or permissions including Adds, Changes, Deletes, and more.
+                  </p>
+                  <p>
+                    To accommodate various Federal Regulatory Compliance (GRC)
+                    requirements, the “GRC” (Governance, Risk, and Compliance)
+                    Platform is 100% encrypted and delivers a highly secured
+                    platform to qualified clients who deal with CUI, PII, or
+                    other sensitive, controlled, or regulated information. The
+                    GRC APP enables On-Demand assessment management, policy,
+                    procedure, and compliance management, as well as delivering
+                    instant Security System Plans (SSP) or Facility Security
+                    Plans (FSP). Additionally, the GRC manages compliance
+                    deadlines, POAM’s (Plan of Action & Milestones) and more.
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faqs" id="faq">
+        <div class="inner">
+          <div class="title-desc">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+              We want to be the greatest help we can be to you. If you have a
+              recommendation on how we can better improve our content,
+              information delivery, or amplify our service, please contact us
+              immediately and we’ll do our best to accommodate!
+            </p>
+          </div>
+          <div class="faqs-list">
+            <div class="faq-list">
+              <div class="faq" style="color: white">
+                <h3 class="question">
+                  How Much Does Anamo Cost? / How do I get a Quote for Anamo?
+                  <i class="fa-regular fa-square-plus icon"></i>
+                </h3>
+                <div class="answer">
+                  Contact Sales: Sales@Anamo.io / 949.629.3900
+                </div>
+              </div>
+              <div class="faq">
+                <h3 class="question">
+                  Why would my company want to consider using Anamo CDM?
+                  <i class="fa-regular fa-square-plus icon"></i>
+                </h3>
+                <div class="answer">
+                  Offering twice the capability at half the price seems to make
+                  sense to many
+                </div>
+              </div>
+            </div>
+            <div class="faq-list">
+              <div class="faq">
+                <h3 class="question">
+                  Does Anamo offer any Free Access to its CDM Platform?
+                  <i class="fa-regular fa-square-plus icon"></i>
+                </h3>
+                <div class="answer">
+                  “Yes” Anamo offers limited Free-Trials and NFR Licensing to
+                  qualified Distributors & Partners.
+                </div>
+              </div>
+              <div class="faq">
+                <h3 class="question">
+                  Does Anamo offer any special purchasing discount?
+                  <i class="fa-regular fa-square-plus icon"></i>
+                </h3>
+                <div class="answer">
+                  “Yes” Anamo does provide special discounts to Social,
+                  Military, Educational, Religious, Fraternal and Political
+                  organizations.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="inner">
+          <div class="top">
+            <div class="logo-desc">
+              <image src="{% static 'media/footer-logo2.webp' %}" alt="Anamo" />
+              <p>
+                Protect your systems from potential cyber attacks by proactively
+                identifying and addressing software and hardware vulnerabilities
+                with our comprehensive vulnerability management solutions.
+              </p>
+              <image
+                src="{% static 'media/footer-logo.webp' %}"
+                alt="UsProTech"
+              />
+            </div>
+            <div class="contact">
+              <h4>Contact</h4>
+              <div class="details">
+                <p>info@anamo.io</p>
+                <p>(949) 629-3900</p>
+                <p>Las Vegas, Nevada - USA</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <p>© 2024 Anamo, All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script defer src="{% static 'js/scripts.js' %}"></script>
+  </body>
+</html>
