@@ -1,0 +1,1 @@
+# anamo-website-django-version
