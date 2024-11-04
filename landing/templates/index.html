@@ -49,15 +49,15 @@
           </a>
         </nav>
         <header>
-          <video loop autoplay muted>
+          <video loop autoplay muted playsinline>
             <source
               src="https://amorserv-assets.s3.amazonaws.com/amoservtech/v2.mp4"
               type="video/mp4"
             />
-            <source
+            {% comment %} <source
               src="https://access-405167844357.s3-accesspoint.us-east-2.amazonaws.com/v3.mp4"
               type="video/mp4"
-            />
+            /> {% endcomment %}
             Your browser does not support the video tag.
           </video>
           <div class="layer"></div>
