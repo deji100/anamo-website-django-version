@@ -1470,6 +1470,11 @@ body::-webkit-scrollbar-thumb {
     .main .faqs .inner .title-desc p {
         width: 100%;
     }
+
+    .main .solution .inner .nav-content .content .img-container img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
