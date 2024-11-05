@@ -132,6 +132,17 @@ body::-webkit-scrollbar-thumb {
     z-index: 0;
 }
 
+.main .hero header img {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
 .main .hero header .layer {
     width: 100%;
     height: 100%;
@@ -1551,6 +1562,14 @@ body::-webkit-scrollbar-thumb {
         flex-direction: column;
         gap: 30px;
     }
+
+    .main .hero header video {
+        display: none;
+    }
+
+    .main .hero header img {
+        display: flex;
+    }    
 }
 
 @media screen and (max-width: 450px) {

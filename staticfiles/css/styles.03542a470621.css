@@ -1445,11 +1445,11 @@ body::-webkit-scrollbar-thumb {
         padding-left: 20px;
         padding-right: 30px;
         justify-content: space-between;
-    }    
+    }
 
     .main .hero nav img {
         width: 100px;
-    }    
+    }
 }
 
 @media screen and (max-width: 730px) {
@@ -1458,11 +1458,20 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+@media screen and (max-width: 700px) {
+    .main .solution .inner .nav-content .content .img-container {
+        transform: rotate(45deg);
+        border: 1px solid orange;
+    }
+}
+
+
 @media screen and (max-width: 630px) {
     .main .solution .inner .nav-content .content img {
         width: 100%;
         height: auto;
         margin: 10px 0;
+        border: 1px solid orange;
     }
 }
 
@@ -1476,7 +1485,6 @@ body::-webkit-scrollbar-thumb {
         height: 100%;
     }
 }
-
 
 @media screen and (max-width: 580px) {
     .main .hero header .content .title h1 {
@@ -1585,6 +1593,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 400px) {
+
     .main .about .inner h2,
     .main .faqs .inner .title-desc h2,
     .main .solution .inner h2 {
@@ -1600,16 +1609,14 @@ body::-webkit-scrollbar-thumb {
 
     .main footer .inner .bottom p {
         font-size: 14px;
-    }    
+    }
 }
-
 
 @media screen and (max-width: 344px) {
     .main .about {
         top: 300px;
     }
 }
-
 
 @media screen and (max-width: 340px) {
     .main .hero header .content .title h1 span {
@@ -1621,5 +1628,4 @@ body::-webkit-scrollbar-thumb {
         font-size: 14px;
         line-height: 30px;
     }
-
 }
