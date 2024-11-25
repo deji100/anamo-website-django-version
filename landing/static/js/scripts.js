@@ -19,6 +19,7 @@ const aboutImg = document.querySelector(".main .about .inner .content img")
 const cdmInner = document.querySelector(".main .cdm .inner")
 const contentImg = document.querySelectorAll(".main .solution .inner .nav-content .content img")
 const contentDetail = document.querySelectorAll(".main .solution .inner .nav-content .content .details")
+const testimonial = document.querySelector(".testimonial")
 const faqInner = document.querySelector(".main .faqs .inner")
 
 headerTitle.forEach(el => observer.observe(el))
@@ -29,19 +30,17 @@ partnerImg.forEach(el => observer.observe(el))
 observer.observe(aboutInner)
 observer.observe(aboutImg)
 observer.observe(cdmInner)
+observer.observe(testimonial)
 observer.observe(faqInner)
 contentImg.forEach(el => observer.observe(el))
 contentDetail.forEach(el => observer.observe(el))
 
 document.querySelectorAll('.faq .icon').forEach(icon => {
     icon.addEventListener('click', () => {
-        // Toggle the active class on the icon
         icon.classList.toggle('active');
 
-        // Find the answer div within the same parent element (the .faq div)
         const answer = icon.closest('.faq').querySelector('.answer');
 
-        // Toggle the active class on the answer div
         answer.classList.toggle('active');
     });
 });
@@ -52,7 +51,6 @@ $(document).ready(function () {
     const $contents = $(".contents .content");
 
     function showContent(id) {
-        // Hide all content sections and remove active state from nav items
         $contents.each(function () {
             $(this).css("display", $(this).hasClass(id) ? "block" : "none");
         });
@@ -62,15 +60,13 @@ $(document).ready(function () {
         });
     }
 
-    // Add click event to each navigation item
     $navItems.each(function () {
         $(this).on("click", function () {
-            showContent(this.id); // Pass the id to showContent
+            showContent(this.id);
         });
     });
 
-    // Display the first content by default
-    showContent("one"); // Adjust to the initial content ID
+    showContent("one");
 });
 
 $(document).ready(function () {

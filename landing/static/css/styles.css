@@ -424,6 +424,7 @@ body::-webkit-scrollbar-thumb {
 
 .main .about .inner h2,
 .main .faqs .inner .title-desc h2,
+.testimonial .inner .title-desc h2,
 .main .solution .inner h2 {
     font-size: 40px;
     font-style: normal;
@@ -1286,6 +1287,104 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
+.testimonial {
+    margin-top: 70px;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all 1s ease;
+}
+
+.testimonial.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+.testimonial .inner .title-desc {
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 20px 70px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.carousel-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    text-align: left;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    pointer-events: none;
+}
+
+.carousel-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    pointer-events: all;
+    background-color: rgba(106, 105, 105, 0.5);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: red;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+    background-color: red;
+}
 
 @media screen and (max-width: 1260px) {
     .main .hero header .content .title h1 {
@@ -1456,11 +1555,11 @@ body::-webkit-scrollbar-thumb {
         padding-left: 20px;
         padding-right: 30px;
         justify-content: space-between;
-    }    
+    }
 
     .main .hero nav img {
         width: 100px;
-    }    
+    }
 }
 
 @media screen and (max-width: 730px) {
@@ -1537,6 +1636,7 @@ body::-webkit-scrollbar-thumb {
 
     .main .about .inner h2,
     .main .faqs .inner .title-desc h2,
+    .testimonial .inner .title-desc h2,
     .main .solution .inner h2 {
         font-size: 30px;
     }
@@ -1569,7 +1669,7 @@ body::-webkit-scrollbar-thumb {
 
     .main .hero header img {
         display: flex;
-    }    
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -1590,6 +1690,10 @@ body::-webkit-scrollbar-thumb {
     .main .cdm .inner {
         width: 90%;
     }
+
+    .carousel-item {
+        padding: 20px 60px;
+    }    
 }
 
 @media screen and (max-width: 370px) {
@@ -1604,8 +1708,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 400px) {
+
     .main .about .inner h2,
     .main .faqs .inner .title-desc h2,
+    .testimonial .inner .title-desc h2,
     .main .solution .inner h2 {
         font-size: 24px;
         line-height: 35px;
@@ -1619,7 +1725,7 @@ body::-webkit-scrollbar-thumb {
 
     .main footer .inner .bottom p {
         font-size: 14px;
-    }    
+    }
 }
 
 
