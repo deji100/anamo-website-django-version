@@ -1696,6 +1696,17 @@ body::-webkit-scrollbar-thumb {
     }    
 }
 
+@media screen and (max-width: 400px) {
+
+    .main .about .inner h2,
+    .main .faqs .inner .title-desc h2,
+    .testimonial .inner .title-desc h2,
+    .main .solution .inner h2 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
 @media screen and (max-width: 370px) {
     .main .faqs .faqs-list {
         width: 100%;
@@ -1705,16 +1716,13 @@ body::-webkit-scrollbar-thumb {
     .main .faqs .faqs-list .faq-list .faq .question {
         font-size: 14px;
     }
-}
 
-@media screen and (max-width: 400px) {
-
-    .main .about .inner h2,
-    .main .faqs .inner .title-desc h2,
-    .testimonial .inner .title-desc h2,
-    .main .solution .inner h2 {
-        font-size: 24px;
-        line-height: 35px;
+    .main .hero header .content .desc p {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
     }
 }
 
