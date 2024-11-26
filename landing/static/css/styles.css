@@ -436,7 +436,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main .about .inner p {
-    width: 800px;
+    width: 70%;
     margin: 20px auto;
     font-size: 16px;
     font-style: normal;
@@ -475,7 +475,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main .cdm .inner {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -1534,6 +1534,10 @@ body::-webkit-scrollbar-thumb {
     .main footer .inner .top .logo-desc p {
         width: 70%;
     }
+
+    .main .cdm .inner {
+        width: 90%;
+    }
 }
 
 
@@ -1685,10 +1689,6 @@ body::-webkit-scrollbar-thumb {
     .main .hero header .content .desc p {
         font-size: 16px;
         line-height: 35px;
-    }
-
-    .main .cdm .inner {
-        width: 90%;
     }
 
     .carousel-item {
