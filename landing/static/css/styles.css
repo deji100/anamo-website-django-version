@@ -1774,6 +1774,10 @@ body::-webkit-scrollbar-thumb {
     .main .solution .inner h2 {
         text-align: left;
     }
+    
+    .main .faqs .inner .title-desc p {
+        text-align: left;
+    }
 
     .main .hero {
         height: 1000px;
@@ -1841,6 +1845,7 @@ body::-webkit-scrollbar-thumb {
         font-weight: 700;
         line-height: 45px;
     }
+    
 }
 
 @media screen and (max-width: 400px) {
