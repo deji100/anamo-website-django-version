@@ -257,14 +257,14 @@ body::-webkit-scrollbar-thumb {
 .main .hero header .content .title .btns.show {
     opacity: 1;
     transform: translateY(0%);
-    transition: all 1s 1s ease;
+    transition: all 1s .5s ease;
 }
 
 .main .hero header .content .desc .btns {
     display: none;
     opacity: 1;
     transform: translateY(0%);
-    transition: all 1s 1s ease;
+    transition: all 1s .5s ease;
 }
 
 .main .hero header .content .desc .btns button,
@@ -1776,8 +1776,14 @@ body::-webkit-scrollbar-thumb {
     }
 
     .main .hero {
-        height: 900px;
+        height: 1000px;
     }    
+
+    .main .hero header .content .title h1 span {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 45px;
+    }
 
     /* .main .hero header .content .desc {
         top: -100px;
@@ -1795,11 +1801,11 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 480px) {
 
-    .main .hero header .content .title h1 span {
-        font-size: 28px;
+    /* .main .hero header .content .title h1 span {
+        font-size: 32px;
         font-weight: 700;
-        line-height: 40px;
-    }
+        line-height: 45px;
+    } */
 
     .main .hero header .content .title .desc p {
         font-size: 18px;
@@ -1829,6 +1835,12 @@ body::-webkit-scrollbar-thumb {
     .carousel-item {
         padding: 20px 60px;
     }
+
+    .main .hero header .content .title h1 span {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 45px;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1842,9 +1854,9 @@ body::-webkit-scrollbar-thumb {
     }
 
     .main .hero header .content .title h1 span {
-        font-size: 23px;
+        font-size: 28px;
         font-weight: 700;
-        line-height: 40px;
+        line-height: 45px;
     }
 
     .main .hero header .content .title .desc p {
@@ -1903,10 +1915,10 @@ body::-webkit-scrollbar-thumb {
         line-height: 30px;
     } */
 
-    .main .hero header .content .title h1 span {
+    /* .main .hero header .content .title h1 span {
         font-size: 20px;
         font-weight: 700;
         line-height: 35px;
-    }
+    } */
 
 }
