@@ -124,7 +124,7 @@ body::-webkit-scrollbar-thumb {
 
 .main .hero header video {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb {
 .main .hero header img {
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -1774,6 +1774,10 @@ body::-webkit-scrollbar-thumb {
     .main .solution .inner h2 {
         text-align: left;
     }
+
+    .main .hero {
+        height: 900px;
+    }    
 
     /* .main .hero header .content .desc {
         top: -100px;
