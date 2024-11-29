@@ -70,11 +70,42 @@
           <div class="content">
             <div class="title">
               <h1>
-                <span class="header-title">Anamo is CDM,</span>
-                <span class="header-title">A Cybersecurity Platform </span>
-                <span class="header-title">Delivering Continuous, </span>
-                <span class="header-title">Diagnostics, & Mitigation</span>
+                <span class="header-title">Anamo is CDM, A Cybersecurity Platform Delivering Continuous, Diagnostics, & Mitigation</span>
+                {% comment %} <span class="header-title"> </span> {% endcomment %}
+                {% comment %} <span class="header-title"></span> {% endcomment %}
+                {% comment %} <span class="header-title"></span> {% endcomment %}
               </h1>
+
+              <div class="desc">
+                <p>
+                  Anamo is CDM, is the first patent-pending, commercial-grade CDM
+                  cybersecurity platform addressing the need for Real-Time and
+                  Continuous Risk Assessment and Management of User, Groups,
+                  Ports, Permissions, CVE related Software Vulnerabilities across
+                  multiple Operating Systems (Linux, Windows, Etc.) and address
+                  all major components of the DHS CDM cybersecurity program
+                </p>
+                {% comment %} <div class="btns">
+                  <a
+                    href="https://app.anamo.io/login/"
+                    style="text-decoration: none"
+                    target="_blank"
+                  >
+                    <button>
+                      Get Started <IoIosArrowRoundForward class="icon" />
+                    </button>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/watch?v=BPR_sTWgjPc"
+                    style="text-decoration: none"
+                    target="_blank"
+                  >
+                    <button>
+                      DHS/CDM Video <MdOutlinePlayCircle class="icon" />
+                    </button>
+                  </a>
+                </div> {% endcomment %}
+              </div>
 
               <div class="btns">
                 <a
@@ -106,7 +137,7 @@
                 <li>Forensics</li>
               </ul>
             </div>
-            <div class="desc">
+            {% comment %} <div class="desc">
               <p>
                 Anamo is CDM, is the first patent-pending, commercial-grade CDM
                 cybersecurity platform addressing the need for Real-Time and
@@ -135,7 +166,7 @@
                   </button>
                 </a>
               </div>
-            </div>
+            </div> {% endcomment %}
           </div>
         </header>
       </div>
@@ -178,50 +209,60 @@
             Advanced, Autonomous Cybersecurity Risk Assessment
           </p>
 
-          <p>
-            <b>Identification of Technical Adversaries</b> and their
-            <b>Dwell-Time</b> within a compute environment in near
-            <b>Real-Time</b>. Anamo
-            <a href="#cdm" style="color: #fff">CDM</a> provides the ability to
-            identify, document, locate, and notify an InfoSec member of the
-            presence of a Technical Adversary based upon them making one
-            suspicious move, pivot, or modification to their Credentials or
-            Credentials stolen for the purpose of nefarious activities.
-          </p>
-          <p>
-            <b>Identification of: "ZDEs" or Zero-Day Exploits</b>, when present
-            and attempted to be used, are identified by Anamo in near Real-Time.
-            The Anamo <a href="#cdm" style="color: #fff">CDM</a> platform
-            harnesses ML to immediately and continuously cross-correlate the
-            presence of an actively exploited CVE or Port Modification against
-            any Group or User, regardless of authorization or level of
-            Permission, and alerts a member of the InfoSec Team.
-          </p>
-          <p>
-            Anamo, with <b>12 Patents Pending</b>, is a sophisticated
-            <b>Cybersecurity Risk Assessment Software</b>, delivered as an
-            "Agent" that runs as a "Service" on any computing-based system where
-            software can be loaded such as on Workstation, Server,  VM, etc.
-            Furthermore, Anamo is fully function with both Linux Operation
-            Systems, and Windows Operating Systems, and the platform operates
-            autonomously, without any Data-Entry, to deliver a cross section of
-            essential EPP, EDR, ASM, Vulnerability-Scanning, eDiscovery,
-            Forensics, Risk Assessment and Log-Less SIEM information in near
-            Real-Time. 
-          </p>
-          <p>
-            Anamo capabilities found to be unique included its immediately
-            understandable dashboard, its approach to system and vulnerability
-            interrogation, the ease at which a user can travers global system
-            knowledge through to resolution providing patches in seconds, its
-            multi-tenancy features, and its ability to bridge the most critical
-            information offered by standard industry SIEM's without the need to
-            parse a single log. In addition, Anamo demonstrated a robust set of
-            search features that ranged between the various Operation Systems,
-            access to present applications interrogated to the Package level,
-            and deep insight into the history and origins of system present
-            software.
-          </p>
+          <div class="cards">
+            <div class="card">
+              <h3 style="color: #fff;">Identification of Technical Adversaries in Real-Time</h3>
+              <p>
+                Anamo's CDM enables real-time detection and tracking of technical adversaries within a computing environment. The system identifies, documents, and locates suspicious activities, such as unauthorized pivots or credential modifications, and immediately notifies InfoSec members. This ensures swift action against potential nefarious activities.
+              </p>
+              <h5>Features Include:</h5>
+              <ul>
+                <li>Identification of technical adversaries and their dwell-time.</li>
+                <li>Real-time alerts based on single suspicious actions.</li>
+                <li>Comprehensive documentation and notifications to InfoSec teams.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 style="color: #fff;">Real-Time Identification of Zero-Day Exploits (ZDEs)</h3>
+              <p>
+                Anamo's CDM platform leverages advanced machine learning (ML) to detect and respond to Zero-Day Exploits (ZDEs) in near real-time. When an exploit is detected or attempted, the system continuously cross-correlates its presence against active CVEs or port modifications, regardless of user permissions or authorization levels.
+              </p>
+              <h5>Key Features:</h5>
+              <ul>
+                <li><b>Real-Time Detection</b>: Identifies and mitigates active ZDEs as they occur.</li>
+                <li><b>Machine Learning Integration</b>: Continuously cross-checks CVEs and port changes across users and groups.</li>
+                <li><b>Immediate Alerts</b>: Notifies InfoSec team members promptly for swift response.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3 style="color: #fff;">Advanced Cybersecurity Risk Assessment Software</h3>
+              <p>
+                Anamo, with 12 patents pending, is a cutting-edge Cybersecurity Risk Assessment Software designed as an "Agent" that runs seamlessly as a "Service" on any computing-based system, including workstations, servers, and virtual machines (VMs).
+              </p>
+              <h5>Key Features:</h5>
+              <ul>
+                <li><b>Broad Compatibility</b>: Fully functional with both Linux and Windows operating systems.</li>
+                <li><b>Autonomous Operation</b>: No data entry required for operation.</li>
+                <li><b>Comprehensive Capabilities</b>: Delivers near real-time insights across multiple domains: Endpoint Protection Platform (EPP), Endpoint Detection and Response (EDR), Attack Surface Management (ASM), Vulnerability Scanning, eDiscovery, Forensics, Risk Assessment, Log-Less SIEM</li>
+              </ul>
+            </div>
+          </div>
+
+            <div>
+              <p>
+                Anamo capabilities found to be unique included its immediately
+                understandable dashboard, its approach to system and
+                vulnerability interrogation, the ease at which a user can
+                travers global system knowledge through to resolution providing
+                patches in seconds, its multi-tenancy features, and its ability
+                to bridge the most critical information offered by standard
+                industry SIEM's without the need to parse a single log. In
+                addition, Anamo demonstrated a robust set of search features
+                that ranged between the various Operation Systems, access to
+                present applications interrogated to the Package level, and deep
+                insight into the history and origins of system present software.
+              </p>
+            </div>
           <div class="content">
             <img src="{% static 'media/dashboard.webp' %}" alt="Dashboard" />
           </div>
@@ -292,12 +333,14 @@
               eDiscovery & Forensics to the C-Suite and InfoSec Teams.
             </p>
 
-            {% comment %} <p>
+            {% comment %}
+            <p>
               The DHS and CISA developed the multi-billion-dollar CDM program to
               gather essential cybersecurity risk information and effectively
               present various categories on designated dashboards in near
               real-time.
-            </p> {% endcomment %}
+            </p>
+            {% endcomment %}
           </div>
         </div>
       </div>

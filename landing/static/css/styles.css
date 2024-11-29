@@ -165,23 +165,36 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main .hero header .content .title {
-    width: 700px;
-    height: 50%;
+    /* width: 7;
+    height: 50%; */
     color: #fff;
     border-radius: 20px;
     border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
 }
 
 .main .hero header .content .title h1 {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
+}
+
+.main .hero header .content .title h1 span {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: all 1s ease;
 }
 
 .main .hero header .content .title ul {
@@ -201,18 +214,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 12px;
     font-style: normal;
     line-height: 21px;
-}
-
-.main .hero header .content .title h1 span {
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 21px;
-    position: relative;
-    opacity: 0;
-    transform: translateX(-100%);
-    filter: blur(5px);
-    transition: all 1s ease;
 }
 
 .main .hero header .content .title h1 span.header-title.show:nth-child(1) {
@@ -250,20 +251,20 @@ body::-webkit-scrollbar-thumb {
     gap: 20px;
     opacity: 0;
     transform: translateY(50%);
-    transition: all 1s 1.5s ease;
+    transition: all 1s 1s ease;
 }
 
 .main .hero header .content .title .btns.show {
     opacity: 1;
     transform: translateY(0%);
-    transition: all 1s 2s ease;
+    transition: all 1s 1s ease;
 }
 
 .main .hero header .content .desc .btns {
     display: none;
     opacity: 1;
     transform: translateY(0%);
-    transition: all 1s 1.5s ease;
+    transition: all 1s 1s ease;
 }
 
 .main .hero header .content .desc .btns button,
@@ -294,8 +295,8 @@ body::-webkit-scrollbar-thumb {
     font-size: 24px;
 }
 
-.main .hero header .content .desc {
-    width: 40%;
+.main .hero header .content .title .desc {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -304,18 +305,18 @@ body::-webkit-scrollbar-thumb {
     transition: all 1s ease;
 }
 
-.main .hero header .content .desc.show {
+.main .hero header .content .title .desc.show {
     opacity: 1;
     transform: translateX(0%);
-    transition: all 1s 2s ease;
+    transition: all 1s .5s ease;
 }
 
-.main .hero header .content .desc p {
+.main .hero header .content .title .desc p {
     color: #fff;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 50px;
 }
 
 .main .partners {
@@ -412,7 +413,7 @@ body::-webkit-scrollbar-thumb {
     width: 90%;
     margin: 0 auto;
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(10%);
     transition: all 1s .5s ease;
 }
 
@@ -444,6 +445,57 @@ body::-webkit-scrollbar-thumb {
     line-height: 30px;
     color: #fff;
     text-align: left;
+}
+
+.main .about .inner .cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 60px 0;
+    padding-bottom: 50px;
+}
+
+.main .about .inner .cards .card {
+    width: 350px;
+    overflow: hidden;
+    color: #fff;
+    padding: 5px;
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px red;
+}
+
+.main .about .inner .cards .card h3 {
+    font-size: 18px;
+    text-align: left;
+    padding: 15px 5px;
+    padding-bottom: 0px;
+}
+
+.main .about .inner .cards .card p {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.main .about .inner .cards .card h5 {
+    font-size: 16px !important;
+    text-align: left;
+    padding: 5px 10px;
+    /* padding-bottom: 0px; */
+}
+
+.main .about .inner .cards .card ul {
+    padding: 0 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main .about .inner .cards .card ul li {
+    font-size: 14px;
+    line-height: 25px;
 }
 
 .main .about .inner .content {
@@ -1387,7 +1439,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1260px) {
-    .main .hero header .content .title h1 {
+    /* .main .hero header .content .title h1 {
         gap: 40px;
     }
 
@@ -1402,7 +1454,7 @@ body::-webkit-scrollbar-thumb {
     .main .hero header .content .desc p {
         font-size: 24px;
         line-height: 35px;
-    }
+    } */
 
     .main .partners .inner .partner-list img {
         width: 60px;
@@ -1420,13 +1472,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 1040px) {
-    .main .hero header .content .title {
+    /* .main .hero header .content .title {
         width: 500px;
     }
 
     .main .hero header .content .title ul {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 1030px) {
@@ -1443,11 +1495,21 @@ body::-webkit-scrollbar-thumb {
     .main .solution .inner .nav-content .contents {
         width: 100%;
     }
+
+    .main .about .inner .cards {
+        flex-wrap: wrap;
+    }
+
+    .main .hero header .content .title h1 span {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 60px;
+    }
 }
 
 
 @media screen and (max-width: 950px) {
-    .main .hero header .content {
+    /* .main .hero header .content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1488,7 +1550,7 @@ body::-webkit-scrollbar-thumb {
 
     .main .hero header .content .title .btns {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 920px) {
@@ -1564,6 +1626,18 @@ body::-webkit-scrollbar-thumb {
     .main .hero nav img {
         width: 100px;
     }
+
+    .main .hero header .content .title h1 span {
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+
+    .main .hero header .content .title .desc p {
+        font-size: 20px;
+        line-height: 40px;
+    }
+
 }
 
 @media screen and (max-width: 730px) {
@@ -1593,7 +1667,7 @@ body::-webkit-scrollbar-thumb {
 
 
 @media screen and (max-width: 580px) {
-    .main .hero header .content .title h1 {
+    /* .main .hero header .content .title h1 {
         gap: 25px;
     }
 
@@ -1608,7 +1682,7 @@ body::-webkit-scrollbar-thumb {
     .main .hero header .content .desc p {
         font-size: 18px;
         line-height: 35px;
-    }
+    } */
 
     .main footer .inner .top .logo-desc p {
         width: 90%;
@@ -1659,6 +1733,17 @@ body::-webkit-scrollbar-thumb {
         font-size: 14px;
         line-height: 30px;
     }
+
+    .main .hero header .content .title h1 span {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    .main .hero header .content .title .desc p {
+        font-size: 20px;
+        line-height: 40px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1674,10 +1759,56 @@ body::-webkit-scrollbar-thumb {
     .main .hero header img {
         display: flex;
     }
+
+    .main .about .inner .cards .card {
+        width: 95%;
+    }
+
+    .testimonial .inner .title-desc h2 {
+        padding-left: 20px;
+    }
+
+    .main .about .inner h2,
+    .main .faqs .inner .title-desc h2,
+    .testimonial .inner .title-desc h2,
+    .main .solution .inner h2 {
+        text-align: left;
+    }
+
+    /* .main .hero header .content .desc {
+        top: -100px;
+    }
+
+    .main .hero header .content .title h1 {
+        gap: 12px;
+    }
+
+    .main .hero header .content .title h1 span {
+        font-size: 30px;
+        line-height: 30px;
+    } */
+}
+
+@media screen and (max-width: 480px) {
+
+    .main .hero header .content .title h1 span {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    .main .hero header .content .title .desc p {
+        font-size: 18px;
+        line-height: 35px;
+    }
+
+    .main .hero header .content .title {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 450px) {
-    .main .hero header .content .title h1 {
+    /* .main .hero header .content .title h1 {
         gap: 15px;
     }
 
@@ -1689,11 +1820,11 @@ body::-webkit-scrollbar-thumb {
     .main .hero header .content .desc p {
         font-size: 16px;
         line-height: 35px;
-    }
+    } */
 
     .carousel-item {
         padding: 20px 60px;
-    }    
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1703,6 +1834,17 @@ body::-webkit-scrollbar-thumb {
     .testimonial .inner .title-desc h2,
     .main .solution .inner h2 {
         font-size: 24px;
+        line-height: 35px;
+    }
+
+    .main .hero header .content .title h1 span {
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 40px;
+    }
+
+    .main .hero header .content .title .desc p {
+        font-size: 16px;
         line-height: 35px;
     }
 }
@@ -1717,12 +1859,18 @@ body::-webkit-scrollbar-thumb {
         font-size: 14px;
     }
 
-    .main .hero header .content .desc p {
+    /* .main .hero header .content .desc p {
         color: #fff;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 30px;
+    } */
+
+    .main .hero header .content .title h1 span {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 40px;
     }
 }
 
@@ -1745,14 +1893,16 @@ body::-webkit-scrollbar-thumb {
 
 
 @media screen and (max-width: 340px) {
-    .main .hero header .content .title h1 span {
-        font-size: 20px;
-        line-height: 25px;
-    }
 
-    .main .hero header .content .desc p {
+    /* .main .hero header .content .title .desc p {
         font-size: 14px;
         line-height: 30px;
+    } */
+
+    .main .hero header .content .title h1 span {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 35px;
     }
 
 }
