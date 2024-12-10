@@ -471,48 +471,56 @@
   top: -100px;
   left: 50%;
   transform: translate(-50%, 0);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="two"] {
   top: 8%;
   left: -360px;
   transform: translate(0%, 0%);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="three"] {
   top: 8%;
   right: -360px;
   transform: translate(0%, 0%);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="four"] {
   top: 44.5%;
   left: -360px;
   transform: translate(0, 0);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="five"] {
   top: 44.5%;
   right: -360px;
   transform: translate(0, 0);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="six"] {
   top: 81.5%;
   left: -360px;
   transform: translate(0, 0);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="seven"] {
   top: 81.5%;
   right: -360px;
   transform: translate(0, 0);
+  transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="eight"] {
   bottom: -100px;
   left: 50%;
   transform: translate(-50%, 0%);
+  transition: all 5s 1s ease;
 }
 
 .main .anamo_cdm {
@@ -822,7 +830,7 @@
 .main .faqs {
   width: 100%;
   color: #fff;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 .main .faqs .inner {

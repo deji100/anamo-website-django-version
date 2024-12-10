@@ -61,7 +61,7 @@ const Hero = ({ styles }) => {
             width={150}
             height={20}
           />
-          <Link href={"/"} className={styles.link} target="_blank">
+          <Link href={"https://app.anamo.io/login/"} className={styles.link} target="_blank">
             Login
           </Link>
         </nav>
