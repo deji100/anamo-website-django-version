@@ -1208,14 +1208,14 @@ body::-webkit-scrollbar-thumb {
     color: #ffffff90;
 }
 
-.main .faqs .faqs-list {
+.main .faqs .faqs_list {
     width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.main .faqs .faqs-list .faq-list {
+.main .faqs .faqs_list .faq_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1223,7 +1223,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 40px;
 }
 
-.main .faqs .faqs-list .faq-list .faq {
+.main .faqs .faqs_list .faq_list .faq {
     width: 500px;
     height: auto;
     display: flex;
@@ -1231,14 +1231,14 @@ body::-webkit-scrollbar-thumb {
     gap: 5px;
 }
 
-.main .faqs .faqs-list .faq-list .faq .question {
+.main .faqs .faqs_list .faq_list .faq .question {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
 }
 
-.main .faqs .faqs-list .faq-list .faq .question .icon {
+.main .faqs .faqs_list .faq_list .faq .question .icon {
     transform: rotate(90deg);
     transition: all .5s ease;
     position: relative;
@@ -1247,24 +1247,24 @@ body::-webkit-scrollbar-thumb {
     color: red;
 }
 
-.main .faqs .faqs-list .faq-list .faq .question .icon.active {
+.main .faqs .faqs_list .faq_list .faq .question .icon.active {
     transform: rotate(45deg);
     color: green;
     transition: all .5s ease;
 }
 
-.main .faqs .faqs-list .faq-list .faq .answer {
+.main .faqs .faqs_list .faq_list .faq .answer {
     height: 0;
     padding: 0;
     overflow: hidden;
     transition: all .5s ease;
 }
 
-.main .faqs .faqs-list .faq-list .faq .answer .icon {
+.main .faqs .faqs_list .faq_list .faq .answer .icon {
     cursor: pointer;
 }
 
-.main .faqs .faqs-list .faq-list .faq .answer.active {
+.main .faqs .faqs_list .faq_list .faq .answer.active {
     height: auto;
     padding: 10px;
     transition: all .5s ease;
@@ -1466,7 +1466,7 @@ body::-webkit-scrollbar-thumb {
         padding: 0 5px;
     }
 
-    .main .faqs .faqs-list .faq-list .faq {
+    .main .faqs .faqs_list .faq_list .faq {
         width: 400px;
     }
 }
@@ -1585,7 +1585,7 @@ body::-webkit-scrollbar-thumb {
         height: auto;
     }
 
-    .main .faqs .faqs-list .faq-list .faq {
+    .main .faqs .faqs_list .faq_list .faq {
         width: 100%;
     }
 
@@ -1608,12 +1608,12 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
-    .main .faqs .faqs-list {
+    .main .faqs .faqs_list {
         flex-direction: column;
         gap: 10px;
     }
 
-    .main .faqs .faqs-list .faq-list {
+    .main .faqs .faqs_list .faq_list {
         gap: 50px;
     }
 
@@ -1724,12 +1724,12 @@ body::-webkit-scrollbar-thumb {
         margin-bottom: 100px;
     }
 
-    .main .faqs .faqs-list .faq-list .faq h3 {
+    .main .faqs .faqs_list .faq_list .faq h3 {
         font-size: 16px;
         line-height: 30px;
     }
 
-    .main .faqs .faqs-list .faq-list .faq .answer {
+    .main .faqs .faqs_list .faq_list .faq .answer {
         font-size: 14px;
         line-height: 30px;
     }
@@ -1871,12 +1871,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media screen and (max-width: 370px) {
-    .main .faqs .faqs-list {
+    .main .faqs .faqs_list {
         width: 100%;
         padding-right: 20px;
     }
 
-    .main .faqs .faqs-list .faq-list .faq .question {
+    .main .faqs .faqs_list .faq_list .faq .question {
         font-size: 14px;
     }
 
