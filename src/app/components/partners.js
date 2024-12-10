@@ -25,7 +25,7 @@ const Partners = ({ styles }) => {
 
       const totalWidth = slider.scrollWidth / 2; // Original content width
       scrollInterval = setInterval(() => {
-        slider.scrollLeft += 2; // Adjust scroll speed
+        slider.scrollLeft += 5; // Adjust scroll speed
         if (slider.scrollLeft >= totalWidth) {
           // Reset to the start when reaching the cloned section
           slider.scrollLeft = 0;
@@ -40,24 +40,18 @@ const Partners = ({ styles }) => {
     cloneContent();
     startAutoScroll();
 
-    // Pause auto-scroll when the user interacts with the slider
-    const pauseScrollOnInteraction = () => stopAutoScroll();
+    // Pause auto-scroll on hover
+    const pauseScrollOnHover = () => stopAutoScroll();
+    const resumeScrollAfterHover = () => startAutoScroll();
 
-    // Resume auto-scroll when interaction ends
-    const resumeScrollAfterInteraction = () => startAutoScroll();
-
-    // Event listeners for pausing/resuming auto-scroll
-    slider?.addEventListener("mousedown", pauseScrollOnInteraction);
-    slider?.addEventListener("touchstart", pauseScrollOnInteraction);
-    slider?.addEventListener("mouseup", resumeScrollAfterInteraction);
-    slider?.addEventListener("touchend", resumeScrollAfterInteraction);
+    // Event listeners for pausing and resuming auto-scroll on hover
+    slider?.addEventListener("mouseenter", pauseScrollOnHover);
+    slider?.addEventListener("mouseleave", resumeScrollAfterHover);
 
     return () => {
       // Cleanup on component unmount
-      slider?.removeEventListener("mousedown", pauseScrollOnInteraction);
-      slider?.removeEventListener("touchstart", pauseScrollOnInteraction);
-      slider?.removeEventListener("mouseup", resumeScrollAfterInteraction);
-      slider?.removeEventListener("touchend", resumeScrollAfterInteraction);
+      slider?.removeEventListener("mouseenter", pauseScrollOnHover);
+      slider?.removeEventListener("mouseleave", resumeScrollAfterHover);
       stopAutoScroll();
     };
   }, []);
