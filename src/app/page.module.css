@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   overflow-x: hidden;
-  background: var(--background);
+  background: #0a0a0a;
 }
 
 .main {
