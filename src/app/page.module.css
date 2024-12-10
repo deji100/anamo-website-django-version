@@ -476,42 +476,42 @@
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="two"] {
   top: 8%;
-  left: -360px;
+  left: -260px;
   transform: translate(0%, 0%);
   transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="three"] {
   top: 8%;
-  right: -360px;
+  right: -260px;
   transform: translate(0%, 0%);
   transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="four"] {
   top: 44.5%;
-  left: -360px;
+  left: -260px;
   transform: translate(0, 0);
   transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="five"] {
   top: 44.5%;
-  right: -360px;
+  right: -260px;
   transform: translate(0, 0);
   transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="six"] {
   top: 81.5%;
-  left: -360px;
+  left: -260px;
   transform: translate(0, 0);
   transition: all 5s 1s ease;
 }
 
 .main .suite .inner .suite_img .suite_card.active[data-suite-id="seven"] {
   top: 81.5%;
-  right: -360px;
+  right: -260px;
   transform: translate(0, 0);
   transition: all 5s 1s ease;
 }
@@ -1050,27 +1050,27 @@
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="two"] {
-    left: -300px;
+    left: -250px;
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="three"] {
-    right: -300px;
+    right: -250px;
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="four"] {
-    left: -300px;
+    left: -250px;
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="five"] {
-    right: -300px;
+    right: -250px;
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="six"] {
-    left: -300px;
+    left: -250px;
   }
 
   .main .suite .inner .suite_img .suite_card.active[data-suite-id="seven"] {
-    right: -300px;
+    right: -250px;
   }
 
   .main .anamo_cdm .inner .content .content_inner {
