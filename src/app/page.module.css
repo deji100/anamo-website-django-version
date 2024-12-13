@@ -130,28 +130,45 @@
   text-align: center;
 }
 
-.main .partners .inner .ptns::-webkit-scrollbar {
-  opacity: 0;
-}
-
 .main .partners .inner .ptns {
+  width: 100%;
+  height: 50px;
+  min-width: calc(var(--width) * var(--quantity));
   display: flex;
   justify-content: space-between;
+  mask-image: linear-gradient(to right, transparent, #fff 10% 90%, transparent);
   align-items: center;
-  gap: 20px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  white-space: nowrap;
+  position: relative;
 }
 
-.main .partners .inner .ptns::-webkit-scrollbar {
-  display: none;
+.main .partners .inner .ptns .item {
+  width: var(--width);
+  height: var(--height);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 5));
 }
 
-.main .partners .inner .ptns img {
-  flex-shrink: 0;
-  display: inline-block;
-  margin: 0 30px;
+.main .partners .inner .ptns .item img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+.main .partners .inner .ptns:hover .item {
+  animation-play-state: paused !important;
 }
 
 .main .unique {
@@ -733,7 +750,10 @@
 }
 
 .slider .testimonials {
+  height: 300px;
   position: relative;
+  min-width: calc(var(--width_test) * var(--quantity_test));
+  mask-image: linear-gradient(to right, transparent, #fff 2%, transparent);
   margin-top: 50px;
   display: flex;
   align-items: flex-start;
@@ -741,7 +761,6 @@
   overflow-x: scroll;
   white-space: nowrap;
   scroll-behavior: smooth;
-  position: relative;
 }
 
 .slider .testimonials .card {
@@ -751,6 +770,24 @@
   flex: 0 0 calc(100% - 3);
   white-space: normal;
   box-sizing: border-box;
+  animation: autoRunTest 40s linear infinite;
+  animation-delay: calc((40s / var(--quantity_test)) * (var(--position_test) - 8));
+  position: absolute;
+  left: 100%;
+}
+
+@keyframes autoRunTest {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: calc(545px * -1);
+  }
+}
+
+.slider .testimonials:hover .card {
+  animation-play-state: paused !important;
 }
 
 .slider .testimonials .card .details {
@@ -1385,8 +1422,14 @@
 }
 
 @media screen and (max-width: 550px) {
+  .slider .testimonials {
+    gap: 0;
+    min-width: calc(400px * var(--quantity_test));
+  }
+
   .slider .testimonials .card {
     width: 100%;
+    flex: 0 0 calc(100% - 2);
   }
 
   .slider .testimonials .card .details {
@@ -1411,10 +1454,6 @@
     gap: 10px;
   }
 
-  .main .partners .inner .ptns img {
-    margin: 0 20px;
-  }
-
   .main .unique {
     margin-top: 80px;
   }
@@ -1423,7 +1462,7 @@
   .main .cdm .inner .what_is_cdm .title h2,
   .main .cdm .inner .unparalled .title h2,
   .main .faqs .inner .title_desc h2,
-.slider h2,
+  .slider h2,
   .main .unique .inner .title_desc h2 {
     font-size: 24px;
   }
@@ -1485,8 +1524,18 @@
 }
 
 @media screen and (max-width: 440px) {
+  .slider {
+    overflow: visible;
+  }
+  
+  .slider .testimonials {
+    gap: 0;
+    min-width: calc(350px * var(--quantity_test));
+  }
+
   .slider .testimonials .card {
     width: 100%;
+    flex: 0 0 calc(100% - 1);
   }
 
   .slider .testimonials .card .details {

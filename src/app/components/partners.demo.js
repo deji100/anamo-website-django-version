@@ -23,10 +23,11 @@ const Partners = ({ styles }) => {
     const startAutoScroll = () => {
       if (!slider) return;
 
+      const totalWidth = slider.scrollWidth / 2; // Original content width
       scrollInterval = setInterval(() => {
-        slider.scrollLeft += 2; // Adjust scroll speed
-        if (slider.scrollLeft >= slider.scrollWidth / 2) {
-          // Reset to the start when the scroll reaches the cloned content
+        slider.scrollLeft += 5; // Adjust scroll speed
+        if (slider.scrollLeft >= totalWidth) {
+          // Reset to the start when reaching the cloned section
           slider.scrollLeft = 0;
         }
       }, 30);
@@ -39,13 +40,19 @@ const Partners = ({ styles }) => {
     cloneContent();
     startAutoScroll();
 
-    slider?.addEventListener("mouseenter", stopAutoScroll);
-    slider?.addEventListener("mouseleave", startAutoScroll);
+    // Pause auto-scroll on hover
+    const pauseScrollOnHover = () => stopAutoScroll();
+    const resumeScrollAfterHover = () => startAutoScroll();
+
+    // Event listeners for pausing and resuming auto-scroll on hover
+    slider?.addEventListener("mouseenter", pauseScrollOnHover);
+    slider?.addEventListener("mouseleave", resumeScrollAfterHover);
 
     return () => {
-      slider?.removeEventListener("mouseenter", stopAutoScroll);
-      slider?.removeEventListener("mouseleave", startAutoScroll);
-      clearInterval(scrollInterval);
+      // Cleanup on component unmount
+      slider?.removeEventListener("mouseenter", pauseScrollOnHover);
+      slider?.removeEventListener("mouseleave", resumeScrollAfterHover);
+      stopAutoScroll();
     };
   }, []);
 

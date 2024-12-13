@@ -81,46 +81,55 @@ export const suite_data = [
 
 export const testimonials = [
     {
+        id: "1",
         text: "Anamo offers strength in asset management and offers robust system information and NIST compliant user / administrator access and event auditing",
         author: "Ella M.",
         img: "/test1.webp",
     },
     {
+        id: "2",
         text: 'The application allows for continuous and autonomous interrogation of systems, providing real-time vulnerability information directed at the elimination Zero Day Exploits or "ZDEs."',
         author: "Gene S.",
         img: "/test2.webp",
     },
     {
+        id: "3",
         text: "The dashboard can display a broad range of Cybersecurity risk factors across multiple operating systems and device types in one place, which is unique compared to other applications.",
         author: "Daryl R.",
         img: "/test3.webp",
     },
     {
+        id: "4",
         text: "The application can quickly identify vulnerabilities, provide patch information, and allow for the suppression of certain vulnerabilities if necessary.",
         author: "Noah D.",
         img: "/test4.webp",
     },
     {
+        id: "5",
         text: "The application runs as a lightweight service and does not require any special ports to be opened.",
         author: "Ethan B.",
         img: "/test5.webp",
     },
     {
+        id: "6",
         text: "The platform allows for multi-tenancy with the ability to create groups and subgroups, each with their own dashboards.",
         author: "Mason C.",
         img: "/test6.webp",
     },
     {
+        id: "7",
         text: "The system can track and analyze hash IDs, transactions, tags, and permissions for comprehensive monitoring and reporting at both the User and Group levels.",
         author: "Lucas H.",
         img: "/test7.webp",
     },
     {
+        id: "8",
         text: "The platform offers the ability to generate customizable reports with specific information based on user preferences which allows for highly targeted reports generated in seconds without any scheduling.",
         author: "Mia K.",
         img: "/test8.webp",
     },
     {
+        id: "9",
         text: "Anoma focuses on endpoint device-centric, user/group, port, and permission security rather than network-centric security, living in the compute world",
         author: "Ava R.",
         img: "/test9.webp",
