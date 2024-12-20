@@ -7,7 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import SlideX from "../animations/slideX";
 import Slide from "../animations/slide";
 
-const Hero = ({ styles }) => {
+const Hero = ({ styles, handleVideoPlay }) => {
   const textRef = useRef(null);
   const [index, setIndex] = useState(0);
 
@@ -75,9 +75,12 @@ const Hero = ({ styles }) => {
                   <p>Monitor vulnerabilities and implement cybersecurity solutions effectively with Anamo. Click to secure your systems now!</p>
                 </div>
                 <div className={styles.link}>
-                  <Link href={"https://youtu.be/ysYdSxBuUBg"} target="_blank" className={styles.button}>
+                  {/* <Link href={"https://youtu.be/ysYdSxBuUBg"} target="_blank" className={styles.button}>
                     DHS/CDM Video
-                  </Link>
+                  </Link> */}
+                  <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4")} className={styles.button}>
+                    DHS/CDM Video
+                  </button>
                   <p>DHS/CDM stands for the <b>{"Department of Homeland Security's Continuous Diagnostics and Mitigation"}</b> program, aimed at enhancing federal cybersecurity by monitoring and managing risks in real time.</p>
                 </div>
               </div>

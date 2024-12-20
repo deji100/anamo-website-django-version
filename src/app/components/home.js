@@ -42,7 +42,7 @@ export default function Home({ styles }) {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                <Hero styles={styles} />
+                <Hero styles={styles} handleVideoPlay={handleVideoPlay} />
                 <Partners styles={styles} />
                 <IntroVid styles={styles} handleVideoPlay={handleVideoPlay} />
                 <Suite styles={styles} />
