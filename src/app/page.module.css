@@ -187,7 +187,6 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  color: #fff;
   font-size: 32px;
   z-index: 20;
   cursor: pointer;
@@ -199,6 +198,11 @@
   color: #000;
   border-radius: 10px;
   padding: 5px;
+}
+
+.pop .inner .close:hover {
+  background: #fff;
+  border: 1px solid #CC0001;
 }
 
 .pop .inner .modal {
@@ -331,6 +335,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+
+.main .intro_vids .inner .videos .vid .icon_container:hover {
+  background: #fff;
 }
 
 .main .intro_vids .inner .videos .vid h5 {

@@ -11,25 +11,20 @@ const Hero = ({ styles }) => {
   const textRef = useRef(null);
   const [index, setIndex] = useState(0);
 
-  // The full text with the word "Covered" to style it dynamically
   // const text = `Worried About Cyber Threats? We've Got You Covered`;
   const text = `Think your system is secure? Let us be your Shield against cyber threats.`;
 
   useEffect(() => {
     const textElement = textRef.current;
 
-    // Function to handle typing effect with word "Covered" styling
     const textTypingEffect = (element, text, setIndex) => {
       if (index === 0) {
-        element.innerHTML = ""; // Reset the content when starting
+        element.innerHTML = "";
       }
 
-      // Add one character at a time to the element while checking for the word "Covered"
-      let currentText = text.slice(0, index + 1); // Get the current part of the text
+      let currentText = text.slice(0, index + 1); 
 
-      // Check if "Covered" is part of the current text and style it
       if (currentText.includes("Shield") && !currentText.includes("<span")) {
-        // Wrap "Covered" in a span with the specific class to style it
         currentText = currentText.replace(
           "Shield",
           `<span class="${styles.covered}">Shield</span>`
@@ -39,12 +34,11 @@ const Hero = ({ styles }) => {
       element.innerHTML = currentText;
 
       if (index === text.length - 1) {
-        return; // Stop once we've finished the text
+        return;
       }
 
-      // Continue the typing effect with a timeout
       setTimeout(() => {
-        setIndex((prevIndex) => prevIndex + 1); // Increment index
+        setIndex((prevIndex) => prevIndex + 1);
       }, 50);
     };
 
@@ -68,7 +62,6 @@ const Hero = ({ styles }) => {
             </Link>
           </nav>
           <div className={styles.question}>
-            {/* Text container to render the typed effect */}
             <SlideX>
               <h1 ref={textRef}></h1>
             </SlideX>
