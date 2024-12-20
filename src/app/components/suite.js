@@ -41,7 +41,7 @@ const Suite = ({ styles }) => {
             <Slide>
                 <div className={styles.inner}>
                     <h2>Comprehensive Cybersecurity Solution suite</h2>
-                    <hr />
+                    {/* <hr /> */}
 
                     <div className={styles.suite_img}>
                         {

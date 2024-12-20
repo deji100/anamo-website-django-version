@@ -135,3 +135,30 @@ export const testimonials = [
         img: "/test9.webp",
     },
 ];
+
+export const videos = [
+    {
+        id: "1",
+        title: "Anamo CDM Introduction",
+        img: "/anamo-intro.webp",
+        link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4"
+    },
+    {
+        id: "2",
+        title: "CISA",
+        img: "/cisa.webp",
+        link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4"
+    },
+    {
+        id: "3",
+        title: "Anamo CDM Explainer",
+        img: "/anamo-explainer.webp",
+        link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4"
+    }
+]
+
+
+// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4" // Third
+// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4" //Second
+// // "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid2.mp4"
+// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4" //First
