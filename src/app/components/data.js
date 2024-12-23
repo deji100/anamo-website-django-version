@@ -158,7 +158,4 @@ export const videos = [
 ]
 
 
-// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4" // Third
-// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4" //Second
 // // "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid2.mp4"
-// "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4" //First
