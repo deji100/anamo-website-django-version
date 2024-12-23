@@ -2,9 +2,9 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import {useInView } from "framer-motion";
-import Image from "next/image"
-import { suite_data } from "./data"
-import Slide from "../animations/slide"
+import Image from "next/image";
+import { suite_data } from "./data";
+import Slide from "../animations/slide";
 
 const SuiteCard = ({ styles, active, suite }) => {
     return (
@@ -41,7 +41,6 @@ const Suite = ({ styles }) => {
             <Slide>
                 <div className={styles.inner}>
                     <h2>Comprehensive Cybersecurity Solution suite</h2>
-                    {/* <hr /> */}
 
                     <div className={styles.suite_img}>
                         {
