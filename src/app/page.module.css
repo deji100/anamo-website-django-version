@@ -157,6 +157,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: #00000082;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   /* border-radius: 10px; */
   z-index: 10;
