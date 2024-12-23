@@ -146,7 +146,7 @@ export const videos = [
     {
         id: "2",
         title: "CISA",
-        img: "/cisa.webp",
+        img: "/cisa.png",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4"
     },
     {
