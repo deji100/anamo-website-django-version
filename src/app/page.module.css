@@ -134,7 +134,6 @@
 }
 
 .main .hero .inner .question .btns .link .button:first-child {
-  /* background: #CC0001; */
   border: 2px solid #CC0001;
 }
 
@@ -159,7 +158,6 @@
   background: #00000082;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* border-radius: 10px; */
   z-index: 10;
   display: flex;
   justify-content: center;
@@ -170,7 +168,6 @@
 
 .pop.active {
   height: 100%;
-  /* border: 1px solid #CC0001; */
   transition: all 1.5s ease-out;
   overflow: hidden;
 }

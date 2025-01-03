@@ -12,7 +12,8 @@ const Hero = ({ styles, handleVideoPlay }) => {
   const [index, setIndex] = useState(0);
 
   // const text = `Worried About Cyber Threats? We've Got You Covered`;
-  const text = `Think your system is secure? Let us be your Shield against cyber threats.`;
+  // const text = `Think your system is secure? Let us be your Shield against cyber threats.`;
+  const text = `Concerned About Cyber Threats? We Provide Powerful Protection.`;
 
   useEffect(() => {
     const textElement = textRef.current;
@@ -24,10 +25,10 @@ const Hero = ({ styles, handleVideoPlay }) => {
 
       let currentText = text.slice(0, index + 1); 
 
-      if (currentText.includes("Shield") && !currentText.includes("<span")) {
+      if (currentText.includes("Protection") && !currentText.includes("<span")) {
         currentText = currentText.replace(
-          "Shield",
-          `<span class="${styles.covered}">Shield</span>`
+          "Protection",
+          `<span class="${styles.covered}">Protection</span>`
         );
       }
 

@@ -139,19 +139,19 @@ export const testimonials = [
 export const videos = [
     {
         id: "1",
-        title: "Anamo CDM Introduction",
+        title: "Getting Started with Anamo",
         img: "/anamo-intro.webp",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4"
     },
     {
         id: "2",
-        title: "CISA",
+        title: "The Cybersecurity and Infrastructure Security Agency (CISA)",
         img: "/cisa.png",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4"
     },
     {
         id: "3",
-        title: "Anamo CDM Explainer",
+        title: "Getting Started with Anamo CDM",
         img: "/anamo-explainer.webp",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4"
     }
