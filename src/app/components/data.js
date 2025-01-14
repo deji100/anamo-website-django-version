@@ -139,7 +139,7 @@ export const testimonials = [
 export const videos = [
     {
         id: "1",
-        title: "Getting Started with Anamo",
+        title: "Anamo CDM Overview",
         img: "/anamo-intro.webp",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4"
     },
@@ -151,7 +151,7 @@ export const videos = [
     },
     {
         id: "3",
-        title: "Getting Started with Anamo CDM",
+        title: "Anamo User Interface Introduction",
         img: "/anamo-explainer.webp",
         link: "https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4"
     }

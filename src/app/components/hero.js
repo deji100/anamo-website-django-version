@@ -76,14 +76,17 @@ const Hero = ({ styles, handleVideoPlay }) => {
                   <p>Monitor vulnerabilities and implement cybersecurity solutions effectively with Anamo. Click to secure your systems now!</p>
                 </div>
                 <div className={styles.link}>
-                  {/* <Link href={"https://youtu.be/ysYdSxBuUBg"} target="_blank" className={styles.button}>
-                    DHS/CDM Video
-                  </Link> */}
                   <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4")} className={styles.button}>
-                    DHS/CDM Video
+                    CISA/DHS/CDM
                   </button>
-                  <p>DHS/CDM stands for the <b>{"Department of Homeland Security's Continuous Diagnostics and Mitigation"}</b> program, aimed at enhancing federal cybersecurity by monitoring and managing risks in real time.</p>
+                  <p>The CISA/DHS Continuous Diagnostics and Mitigation (CDM) program strengthens federal cybersecurity through real-time risk monitoring and management.</p>
                 </div>
+                {/* <div className={styles.link}>
+                  <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4")} className={styles.button}>
+                    ANAMO CDM
+                  </button>
+                  <p>Streamlined Cybersecurity Management and Defense.</p>
+                </div> */}
               </div>
             </Slide>
           </div>

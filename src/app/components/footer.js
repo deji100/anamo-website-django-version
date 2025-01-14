@@ -24,7 +24,7 @@ const Footer = ({ styles }) => {
                     </div>
                 </div>
                 <div className={styles.bottom}>
-                    <p>© 2024 Anamo, All rights reserved</p>
+                    <p>© 2025 Anamo, All Rights Reserved.</p>
                 </div>
             </div>
         </footer>
