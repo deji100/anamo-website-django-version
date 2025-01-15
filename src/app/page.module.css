@@ -13,8 +13,8 @@
 .main .hero,
 .main .hero .inner {
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
 }
 
@@ -67,6 +67,12 @@
   color: #fff;
   font-size: 70px;
   -webkit-text-stroke: 0.3vw #ffffff18;
+}
+
+.main .hero .inner .question h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 300;
 }
 
 .main .hero .inner .question h1 .threats {
@@ -141,6 +147,10 @@
 .main .hero .inner .question .btns .link .button:last-child {
   background: transparent;
   border: 1px solid #fff;
+}
+
+.main .hero .inner .question .floatingTexts {
+  color: #fff;
 }
 
 .main .hero .inner .img {
@@ -1304,6 +1314,10 @@
     font-size: 50px;
   }
 
+  .main .hero .inner .question h2 {
+    font-size: 40px;
+  }
+
   .main .suite .inner .suite_img .img_container {
     width: 300px;
   }
@@ -1382,6 +1396,10 @@
 @media screen and (max-width: 850px) {
   .main .hero .inner .question h1 {
     font-size: 40px;
+  }
+
+  .main .hero .inner .question h2 {
+    font-size: 30px;
   }
 
   .main .hero .inner .question .btns .button {
@@ -1529,6 +1547,11 @@
   .main .faqs .faqs_list .faq_list {
     gap: 50px;
   }
+
+  .main .hero .inner .question .btns .link .button {
+    width: 150px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -1539,7 +1562,7 @@
 
 @media screen and (max-width: 700px) {
   .main .hero {
-    height: 450px;
+    /* height: 450px; */
   }
 
   .main .hero .inner .nav .link {
@@ -1557,6 +1580,10 @@
   .main .hero .inner .question h1 {
     font-size: 30px;
     line-height: 45px;
+  }
+
+  .main .hero .inner .question h2 {
+    font-size: 20px;
   }
 
   .main .hero .inner .question .btns .button {
@@ -1703,10 +1730,15 @@
     text-align: left;
   }
 
-  .main .hero .inner .question .btns .link .button {
-    width: 150px;
-    font-size: 14px;
+  .main .hero .inner .question {
+    width: 95%;
   }
+
+  .main .hero .inner .question .btns .link .button {
+    width: 140px;
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 440px) {
@@ -1738,10 +1770,6 @@
   .main .hero .inner .nav .logo {
     width: 120px;
     height: 15px;
-  }
-
-  .main .hero .inner .question {
-    width: 90%;
   }
 
   .main .hero .inner .question .btns {
