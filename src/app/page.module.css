@@ -130,8 +130,8 @@
   width: 300px;
   display: block;
   position: absolute;
-  bottom: 0;
-  right: -300px;
+  bottom: 60px;
+  left: 0px;
   border-radius: 10px;
   z-index: 10;
 }
