@@ -7,6 +7,7 @@ const Vid = ({ styles, vid, onClick }) => {
 
     return (
         <div className={styles.vid}>
+            {/* <p></p> */}
             <div className={styles.image}>
                 <Image src={vid.img} alt="Video" width={1000} height={1000} />
             </div>

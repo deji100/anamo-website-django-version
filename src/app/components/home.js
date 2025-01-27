@@ -11,13 +11,28 @@ import CDM from "./cdm";
 import Testimonials from "./testimonials";
 import FAQS from "./faq";
 import Footer from "./footer";
+import { learn_more_text } from "./data";
 import { useEffect, useState, useRef } from "react";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
+import { MdClose } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
+import { MdArrowBackIos } from "react-icons/md";
 
 export default function Home({ styles }) {
     const [popModal, setPopModal] = useState(false)
     const [url, setUrl] = useState(null)
     const vidRef = useRef(null)
+    const [toggle, setToggle] = useState(false)
+    const [started, setStarted] = useState(false)
+    const [index, setIndex] = useState(1)
+
+    const handlePrevNext = (type) => {
+        setIndex((prev) =>
+            type === "prev"
+                ? (prev === 0 ? learn_more_text.length - 1 : prev - 1)
+                : (prev === learn_more_text.length - 1 ? 0 : prev + 1)
+        );
+    };
 
     const handleVideoPlay = (link) => {
         setUrl(link)
@@ -32,6 +47,14 @@ export default function Home({ styles }) {
     }
 
     useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev === learn_more_text.length - 1 ? 0 : prev + 1));
+        }, 20000);
+
+        return () => clearInterval(interval);
+    }, [toggle])
+
+    useEffect(() => {
         if (url) {
             setTimeout(() => {
                 vidRef.current.play()
@@ -42,7 +65,7 @@ export default function Home({ styles }) {
     return (
         <div className={styles.page}>
             <main className={styles.main}>
-                <Hero styles={styles} handleVideoPlay={handleVideoPlay} />
+                <Hero styles={styles} handleVideoPlay={handleVideoPlay} setToggle={setToggle} />
                 <Partners styles={styles} />
                 <IntroVid styles={styles} handleVideoPlay={handleVideoPlay} />
                 <Suite styles={styles} />
@@ -54,6 +77,7 @@ export default function Home({ styles }) {
                 <FAQS styles={styles} />
                 <Footer styles={styles} />
             </main>
+
             <div className={popModal ? `${styles.pop} ${styles.active}` : `${styles.pop}`}>
                 <div className={styles.inner}>
                     <div className={styles.close}>
@@ -70,6 +94,44 @@ export default function Home({ styles }) {
                     </div>
                 </div>
             </div>
+
+            <div className={toggle ? `${styles.learn_more} ${styles.active}` : `${styles.learn_more}`}>
+                <div className={styles.inner}>
+                    <div className={styles.close}>
+                        <MdClose className={styles.icon} onClick={() => setToggle(false)} />
+                    </div>
+
+                    <div className={styles.nav}>
+                        <MdArrowBackIos className={styles.icon} onClick={() => handlePrevNext("prev")} />
+                        <MdArrowForwardIos className={styles.icon} onClick={() => handlePrevNext("next")} />
+                    </div>
+
+                    <div className={styles.modal}>
+                        <h2>{learn_more_text[index].title}</h2>
+                        <p>{learn_more_text[index].text}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className={started ? `${styles.form} ${styles.active}` : `${styles.form}`}>
+                <div className={styles.inner}>
+                    <h2>Begin Your Journey with Anamo!</h2>
+                    <form>
+                        <input type="text" placeholder="First Name" name="first_name" required />
+                        <input type="text" placeholder="Last Name" name="last_name" required />
+                        <input type="text" placeholder="Company Name" name="company_name" required />
+                        <input type="email" placeholder="Email" name="email" required />
+                        <input type="tel" placeholder="Phone" name="phone" required />
+                        <input type="text" placeholder="Address" name="address" required />
+                        <div className={styles.btns}>
+                            <button type="submit">Submit</button>
+                            <button type="button" onClick={() => setStarted(false)}>Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <button className={styles.get_started} onClick={() => setStarted(prev => !prev)}>Get Started</button>
         </div>
     );
 }

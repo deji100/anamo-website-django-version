@@ -7,8 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import SlideX from "../animations/slideX";
 import Slide from "../animations/slide";
 
-const AnimatedText = ({ styles }) => {
-  const textArray = ["Stop The Noise.", "Stop The Threats.", "Start The Protection."];
+const AnimatedText = ({ styles, textArray }) => {
   const [currentIndex, setCurrentIndex] = useState(0); // Track the current text being displayed
   const [typingIndex, setTypingIndex] = useState(0); // Track the character typing progress
   const textRef = useRef(null); // Ref to the DOM element for the text
@@ -22,8 +21,8 @@ const AnimatedText = ({ styles }) => {
         textElement.innerHTML = currentText.slice(0, typingIndex + 1); // Update displayed text
         const typingTimeout = setTimeout(() => {
           setTypingIndex((prev) => prev + 1); // Increment typing index
-        }, 50); // Typing speed
-        return () => clearTimeout(typingTimeout); // Clear timeout
+        }, 50);
+        return () => clearTimeout(typingTimeout);
       }
     }
   }, [typingIndex, currentIndex, textArray]);
@@ -33,7 +32,7 @@ const AnimatedText = ({ styles }) => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textArray.length); // 1%3 = 1, 2%3 = 2, 3%3 = 0
       setTypingIndex(0); // Reset typing index
-    }, 5000); // Switch text every 5 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [textArray.length]);
@@ -46,42 +45,28 @@ const AnimatedText = ({ styles }) => {
 };
 
 
-const Hero = ({ styles, handleVideoPlay }) => {
+const Hero = ({ styles, handleVideoPlay, setToggle }) => {
   const textRef = useRef(null);
   const [index, setIndex] = useState(0);
 
-  const text = `Concerned About Cyber Threats? We Provide Powerful Protection.`;
+  const text = `Are You Ready for Simply Superior Cybersecurity? \nGet Anamo! It Delivers Enterprise “CDM” Today!`;
 
   useEffect(() => {
     const textElement = textRef.current;
 
-    const textTypingEffect = (element, text, setIndex) => {
-      if (index === 0) {
-        element.innerHTML = "";
-      }
+    if (!textElement || index >= text.length) return;
 
-      let currentText = text.slice(0, index + 1);
+    const currentText = text.slice(0, index + 1).replace(
+      "“CDM”",
+      `<span class="${styles.covered}">“CDM”</span>`
+    );
 
-      if (currentText.includes("Protection") && !currentText.includes("<span")) {
-        currentText = currentText.replace(
-          "Protection",
-          `<span class="${styles.covered}">Protection</span>`
-        );
-      }
+    textElement.innerHTML = currentText.replace(/\n/g, "<br />");
 
-      element.innerHTML = currentText;
+    const timer = setTimeout(() => setIndex((prev) => prev + 1), 50);
 
-      if (index === text.length - 1) {
-        return;
-      }
-
-      setTimeout(() => {
-        setIndex((prevIndex) => prevIndex + 1);
-      }, 50);
-    };
-
-    textTypingEffect(textElement, text, setIndex);
-  }, [index]);
+    return () => clearTimeout(timer);
+  }, [index, text]);
 
   return (
     <>
@@ -99,37 +84,50 @@ const Hero = ({ styles, handleVideoPlay }) => {
               Login
             </Link>
           </nav>
-          <div className={styles.question}>
-            <SlideX>
-              <h1 ref={textRef}></h1>
-            </SlideX>
-            <Slide>
-              <AnimatedText styles={styles} />
-            </Slide>
-            <Slide>
-              <div className={styles.btns}>
-                <div className={styles.link}>
-                  <Link href={"https://app.anamo.io/login/"} target="_blank" className={styles.button}>
-                    Get Started
-                    <HiArrowLongRight className={styles.icon} />
-                  </Link>
-                  <p>Monitor vulnerabilities and implement cybersecurity solutions effectively with Anamo. Click to secure your systems now!</p>
+          <div className={styles.question_container}>
+            <div className={styles.question}>
+              <SlideX>
+                <h1 ref={textRef}></h1>
+              </SlideX>
+
+              <Slide>
+                <h2>What is CDM and What Does CDM Do?</h2>
+                <br />
+                <div className={styles.btns}>
+                  <div className={styles.link}>
+                    <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4")} className={styles.button}>
+                      ANAMO Overview
+                    </button>
+                    <p>Enjoy this short animation and overview of Anamo, a powerful Cybersecurity functionality found in Continuous Diagnostic & Mitigation “CDM” platforms</p>
+                  </div>
+                  <div className={styles.link}>
+                    <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4")} className={styles.button}>
+                      CISA/DHS/CDM
+                    </button>
+                    <p>The CISA/DHS Continuous Diagnostics and Mitigation (CDM) program strengthens federal cybersecurity through real-time risk monitoring and management.</p>
+                  </div>
+                  <div className={styles.link}>
+                    <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid4.mp4")} className={styles.button}>
+                      SEE ANAMO CDM
+                    </button>
+                    <p>Where SIEM, EPP, ASM, EDR, Vul-Scan, Forensics and More, all come together in a Single User-Interface that’s Automated, Always-On, Always Scanning and Ready to Alert You About Critical “Hard-To-Detect” Cybersecurity Risk.</p>
+                  </div>
                 </div>
-                <div className={styles.link}>
-                  <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid1.mp4")} className={styles.button}>
-                    CISA/DHS/CDM
-                  </button>
-                  <p>The CISA/DHS Continuous Diagnostics and Mitigation (CDM) program strengthens federal cybersecurity through real-time risk monitoring and management.</p>
-                </div>
-                <div className={styles.link}>
-                  <button onClick={() => handleVideoPlay("https://amorserv-assets.s3.us-east-1.amazonaws.com/amorserv-solutions/web/testvid3.mp4")} className={styles.button}>
-                    ANAMO CDM
-                  </button>
-                  <p>Streamlined Cybersecurity Management and Defense.</p>
-                </div>
-              </div>
-            </Slide>
+              </Slide>
+
+              <Slide>
+                <button className={styles.learn_more_anamo} onClick={() => setToggle(true)}>
+                  Learn more about Anamo here
+                  <HiArrowLongRight className={styles.icon} />
+                </button>
+              </Slide>
+
+              <Slide>
+                <AnimatedText styles={styles} textArray={["Stop The Noise.", "Stop The Adversary.", "Stop The Dwell-Time.", "Stop The Scheduling.", "Start The Detection.", "Start The Forensics.", "Start The Logic.", 'Start The "CDM"']} />
+              </Slide>
+            </div>
           </div>
+
           <Image
             className={styles.img}
             src={"/anamo-hero-img.webp"}
