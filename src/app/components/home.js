@@ -25,6 +25,7 @@ export default function Home({ styles }) {
     const [toggle, setToggle] = useState(false)
     const [started, setStarted] = useState(false)
     const [index, setIndex] = useState(1)
+    const [values, setValues] = useState({first_name: "", last_name: "", company_name: "", email: "", phone: "", address: "" })
 
     const handlePrevNext = (type) => {
         setIndex((prev) =>
@@ -33,6 +34,16 @@ export default function Home({ styles }) {
                 : (prev === learn_more_text.length - 1 ? 0 : prev + 1)
         );
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        console.log(values)
+    }
+
+    const handleChange = (e) => {
+        setValues({...values, [e.target.name]: e.target.value})
+    }
 
     const handleVideoPlay = (link) => {
         setUrl(link)
@@ -116,13 +127,13 @@ export default function Home({ styles }) {
             <div className={started ? `${styles.form} ${styles.active}` : `${styles.form}`}>
                 <div className={styles.inner}>
                     <h2>Begin Your Journey with Anamo!</h2>
-                    <form>
-                        <input type="text" placeholder="First Name" name="first_name" required />
-                        <input type="text" placeholder="Last Name" name="last_name" required />
-                        <input type="text" placeholder="Company Name" name="company_name" required />
-                        <input type="email" placeholder="Email" name="email" required />
-                        <input type="tel" placeholder="Phone" name="phone" required />
-                        <input type="text" placeholder="Address" name="address" required />
+                    <form onSubmit={handleSubmit}>
+                        <input type="text" placeholder="First Name" name="first_name" value={values.first_name} onChange={handleChange} required />
+                        <input type="text" placeholder="Last Name" name="last_name" value={values.last_name} onChange={handleChange} required />
+                        <input type="text" placeholder="Company Name" name="company_name" value={values.company_name} onChange={handleChange} required />
+                        <input type="email" placeholder="Email" name="email" value={values.email} onChange={handleChange} required />
+                        <input type="tel" placeholder="Phone" name="phone" value={values.phone} onChange={handleChange} required />
+                        <input type="text" placeholder="Address" name="address" value={values.address} onChange={handleChange} required />
                         <div className={styles.btns}>
                             <button type="submit">Submit</button>
                             <button type="button" onClick={() => setStarted(false)}>Cancel</button>
