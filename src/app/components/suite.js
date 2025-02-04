@@ -28,10 +28,8 @@ const Suite = ({ styles }) => {
 
     useEffect(() => {
         if (isInView) {
-            console.log(true)
             setActive(true)
         }else {
-            console.log(false)
             setActive(false)
         }
     }, [active, isInView])

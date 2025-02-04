@@ -15,7 +15,6 @@ const Partners = ({ styles }) => {
       if (!slider || clonedContentRef.current) return;
       clonedContentRef.current = true;
 
-      // Clone the content of the slider for seamless scrolling
       const content = slider.innerHTML;
       slider.innerHTML += content;
     };
@@ -23,11 +22,10 @@ const Partners = ({ styles }) => {
     const startAutoScroll = () => {
       if (!slider) return;
 
-      const totalWidth = slider.scrollWidth / 2; // Original content width
+      const totalWidth = slider.scrollWidth / 2;
       scrollInterval = setInterval(() => {
-        slider.scrollLeft += 5; // Adjust scroll speed
+        slider.scrollLeft += 5;
         if (slider.scrollLeft >= totalWidth) {
-          // Reset to the start when reaching the cloned section
           slider.scrollLeft = 0;
         }
       }, 30);

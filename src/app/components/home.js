@@ -17,6 +17,11 @@ import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIos } from "react-icons/md";
+// import SuccessModal from "./success";
+import { Oval } from 'react-loader-spinner'
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function Home({ styles }) {
     const [popModal, setPopModal] = useState(false)
@@ -24,8 +29,9 @@ export default function Home({ styles }) {
     const vidRef = useRef(null)
     const [toggle, setToggle] = useState(false)
     const [started, setStarted] = useState(false)
+    const [submit, setSubmit] = useState(false)
     const [index, setIndex] = useState(1)
-    const [values, setValues] = useState({first_name: "", last_name: "", company_name: "", email: "", phone: "", address: "" })
+    const [values, setValues] = useState({ first_name: "", last_name: "", company_name: "", email: "", phone_number: "", address: "" })
 
     const handlePrevNext = (type) => {
         setIndex((prev) =>
@@ -35,14 +41,43 @@ export default function Home({ styles }) {
         );
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(values)
+        if (!values.first_name || !values.last_name || !values.company_name || !values.email || !values.phone_number || !values.address) {
+            setSubmit(false)
+            return;
+        }
+
+        setSubmit(true)
+
+        try {
+            const url = `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/getting_started`
+            const resp = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(values)
+            })
+
+            if (resp.status === 200) {
+                setValues({ first_name: "", last_name: "", company_name: "", email: "", phone_number: "", address: "" })
+                toast.success("Form submitted successfully!");
+                setStarted(false)
+                setSubmit(false)
+            } else {
+                toast.error("Failed to submit the form. Please try again.");
+                setSubmit(false)
+            }
+        } catch (error) {
+            toast.error("Failed to submit the form. Please try again.");
+            setSubmit(false)
+        }
     }
 
     const handleChange = (e) => {
-        setValues({...values, [e.target.name]: e.target.value})
+        setValues({ ...values, [e.target.name]: e.target.value })
     }
 
     const handleVideoPlay = (link) => {
@@ -60,7 +95,7 @@ export default function Home({ styles }) {
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev === learn_more_text.length - 1 ? 0 : prev + 1));
-        }, 20000);
+        }, 15000);
 
         return () => clearInterval(interval);
     }, [toggle])
@@ -73,8 +108,18 @@ export default function Home({ styles }) {
         }
     }, [url])
 
+    // useEffect(() => {
+    //     if (success) {
+    //         setTimeout(() => {
+    //             setSuccess(false)
+    //         }, 5000);
+    //     }
+    // }, [success])
+
     return (
         <div className={styles.page}>
+            <ToastContainer position="top-right" autoClose={3000} />
+
             <main className={styles.main}>
                 <Hero styles={styles} handleVideoPlay={handleVideoPlay} setToggle={setToggle} />
                 <Partners styles={styles} />
@@ -132,17 +177,36 @@ export default function Home({ styles }) {
                         <input type="text" placeholder="Last Name" name="last_name" value={values.last_name} onChange={handleChange} required />
                         <input type="text" placeholder="Company Name" name="company_name" value={values.company_name} onChange={handleChange} required />
                         <input type="email" placeholder="Email" name="email" value={values.email} onChange={handleChange} required />
-                        <input type="tel" placeholder="Phone" name="phone" value={values.phone} onChange={handleChange} required />
+                        <input type="tel" placeholder="Phone Number" name="phone_number" value={values.phone_number} onChange={handleChange} required />
                         <input type="text" placeholder="Address" name="address" value={values.address} onChange={handleChange} required />
                         <div className={styles.btns}>
-                            <button type="submit">Submit</button>
-                            <button type="button" onClick={() => setStarted(false)}>Cancel</button>
+                            <button type="submit">{submit ? <Oval visible={true} height="80"
+                                width="20"
+                                color="#fff"
+                                ariaLabel="oval-loading"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                            /> : "Submit"}
+                            </button>
+                            <button type="button" onClick={() => {
+                                setStarted(false)
+                                setSubmit(false)
+                            }}>Cancel</button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <button className={styles.get_started} onClick={() => setStarted(prev => !prev)}>Get Started</button>
+            {/* <SuccessModal
+                show={success}
+                onClose={() => setSuccess(false)}
+                message="Your data has been saved successfully!"
+            /> */}
+
+            <button className={styles.get_started} onClick={() => {
+                setStarted(prev => !prev)
+                setSubmit(false)
+            }}>Get Started</button>
         </div>
     );
 }

@@ -23,7 +23,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  z-index: 100;
+  z-index: 9;
 }
 
 .get_started:hover {
@@ -341,10 +341,15 @@
 }
 
 .form .inner form .btns button {
-  padding: 15px 20px;
+  width: 100px;
+  height: 40px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   border: none;
   outline: none;
+  font-weight: 500;
   cursor: pointer;
   color: #fff;
 }
