@@ -28,7 +28,7 @@ const UniqueCard = ({ styles, unique }) => {
                 </ul>
             </div>
             <button onClick={() => setToggle(i => !i)}>
-                Read More
+                {toggle ? "Read Less" : "Read More"}
                 <MdKeyboardArrowDown className={styles.icon} />
             </button>
         </div>

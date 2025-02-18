@@ -28,7 +28,7 @@ const CDM = ({ styles }) => {
                                 <li>BA - Behavior Awareness</li>
                             </ul>
                             <p><Link href={"/2020 09 03_CDM Program Overview_Fact Sheet_1.pdf"} target="_blank" style={{ color: "#CC0001" }} download>Download</Link> the U.S. Federal Agency Report to discover which federal agencies have integrated CDM as a core part of their cybersecurity defense strategy and learn about the 100+ organizations leveraging this advanced capability.</p>
-                            <p><Link href={"https://www.cisa.gov/resources-tools/programs/continuous-diagnostics-and-mitigation-cdm-program"} target="_blank" style={{ color: "#CC0001" }}>Click here</Link> to get answers to your CDM program questions directly from CISA and the DHS</p>
+                            <p><Link href={"https://www.cisa.gov/resources-tools/programs/continuous-diagnostics-and-mitigation-cdm-program"} target="_blank" style={{ color: "#CC0001" }} download>Click here</Link> to get answers to your CDM program questions directly from CISA and the DHS</p>
                         </div>
                         <button type="button" onClick={() => setToggle(!toggle)}>
                             {toggle ? "Read Less" : "Read More"}
