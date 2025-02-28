@@ -233,6 +233,16 @@
   transition: height .5s ease-in;
 }
 
+.form.enquire {
+  height: 100%;
+  position: relative;
+  top: 0;
+  transform: translate(-50%, 0%);
+  z-index: 20;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
 .learn_more {
   width: 80%;
   color: #fff;
@@ -297,6 +307,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.form.enquire {
+  overflow: hidden;
 }
 
 .form .inner {

@@ -17,7 +17,6 @@ import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { MdClose } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIos } from "react-icons/md";
-// import SuccessModal from "./success";
 import { Oval } from 'react-loader-spinner'
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -109,14 +108,6 @@ export default function Home({ styles }) {
         }
     }, [url])
 
-    // useEffect(() => {
-    //     if (success) {
-    //         setTimeout(() => {
-    //             setSuccess(false)
-    //         }, 5000);
-    //     }
-    // }, [success])
-
     return (
         <div className={styles.page}>
             <ToastContainer position="top-right" autoClose={3000} />
@@ -179,7 +170,7 @@ export default function Home({ styles }) {
                         <input type="text" placeholder="Company Name" name="company_name" value={values.company_name} onChange={handleChange} required />
                         <input type="email" placeholder="Email" name="email" value={values.email} onChange={handleChange} required />
                         <input type="tel" placeholder="Phone Number" name="phone_number" value={values.phone_number} onChange={handleChange} required />
-                        <input type="text" placeholder="Address" name="address" value={values.address} onChange={handleChange} required />
+                        <input type="text" placeholder="City, State" name="address" value={values.address} onChange={handleChange} required />
                         <div className={styles.btns}>
                             <button type="submit">{submit ? <Oval visible={true} height="80"
                                 width="20"
@@ -197,12 +188,6 @@ export default function Home({ styles }) {
                     </form>
                 </div>
             </div>
-
-            {/* <SuccessModal
-                show={success}
-                onClose={() => setSuccess(false)}
-                message="Your data has been saved successfully!"
-            /> */}
 
             <button className={styles.get_started} onClick={() => {
                 setStarted(prev => !prev)
