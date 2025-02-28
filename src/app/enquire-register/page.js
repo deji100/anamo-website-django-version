@@ -11,7 +11,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { toast, ToastContainer } from "react-toastify";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 
