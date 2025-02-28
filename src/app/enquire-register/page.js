@@ -147,7 +147,7 @@ const Enquire = () => {
             <ToastContainer position="top-right" autoClose={3000} />
 
             <main className={styles.main}>
-                <Hero styles={styles} handleVideoPlay={handleVideoPlay} setToggle={setToggle} />
+                {/* <Hero styles={styles} handleVideoPlay={handleVideoPlay} setToggle={setToggle} /> */}
                 <div className={`${styles.form} ${styles.enquire}`}>
                     <div className={styles.inner}>
                         <h2>Begin Your Journey with Anamo!</h2>
@@ -176,7 +176,7 @@ const Enquire = () => {
                     </div>
                 </div>
 
-                <Footer styles={styles} />
+                {/* <Footer styles={styles} /> */}
             </main>
 
             <div className={popModal ? `${styles.pop} ${styles.active}` : `${styles.pop}`}>
