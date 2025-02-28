@@ -11,6 +11,7 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdOutlineCloseFullscreen } from "react-icons/md";
 import { toast, ToastContainer } from "react-toastify";
+import { useRouter } from "next/router";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 
@@ -23,6 +24,7 @@ const Enquire = () => {
     const [submit, setSubmit] = useState(false)
     const [index, setIndex] = useState(1)
     const [values, setValues] = useState({ first_name: "", last_name: "", company_name: "", email: "", phone_number: "", address: "" })
+    const router = useRouter(); // Next.js Router
 
     const handlePrevNext = (type) => {
         setIndex((prev) =>
@@ -75,6 +77,11 @@ const Enquire = () => {
                 });
                 setStarted(false);
                 setSubmit(false)
+
+                setTimeout(() => {
+                    router.push("/"); // Redirect to success page
+                }, 2000);
+
             } else {
                 setSubmit(false)
                 toast.error("Failed to submit form. Please try again.");
