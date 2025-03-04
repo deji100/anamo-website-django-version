@@ -80,9 +80,9 @@ const Hero = ({ styles, handleVideoPlay, setToggle }) => {
               width={150}
               height={20}
             />
-            <Link href={"https://app.anamo.io/login/"} className={styles.link} target="_blank">
+            {/* <Link href={"https://app.anamo.io/login/"} className={styles.link} target="_blank">
               Login
-            </Link>
+            </Link> */}
           </nav>
           <div className={styles.question_container}>
             <div className={styles.question}>

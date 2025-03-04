@@ -12,7 +12,6 @@ const Hero = ({ styles }) => {
     `Worried About <span className="${styles.threats}">Cyber Threats</span>? We've Got You <span className="${styles.question_cover}">Covered.</span>`
   );
 
-
   useEffect(() => {
     const text = textRef.current
     const textTypingEffect = (element, text, setIndex) => {

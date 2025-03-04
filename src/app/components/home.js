@@ -194,11 +194,11 @@ export default function Home({ styles }) {
                 setSubmit(false)
             }}>Get Started</button>
 
-            <button className={`${styles.get_started} ${styles.terms}`}>
+            {/* <button className={`${styles.get_started} ${styles.terms}`}>
                 <Link href="/2025 Anamo Subscription Software Licenses and End User License Agreement EULA Ver 01_01.pdf" target="_blank" download>
                 Terms & Conditions
                 </Link>
-            </button>
+            </button> */}
         </div>
     );
 }

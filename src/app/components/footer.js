@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FooterImg1 from "/public/footer-logo2.png"
 import FooterImg2 from "/public/footer-logo.png"
+import Link from "next/link";
 
 const Footer = ({ styles }) => {
     return (
@@ -21,6 +22,16 @@ const Footer = ({ styles }) => {
                             <p>(949) 629-3900</p>
                             <p>Las Vegas, Nevada - USA</p>
                         </div>
+                        <button className={`${styles.terms}`}>
+                            <Link href="/2025 Anamo Subscription Software Licenses and End User License Agreement EULA Ver 01_01.pdf" target="_blank" download>
+                                Terms & Conditions
+                            </Link>
+                        </button>
+                        {/* <div>
+                            <Link href="/2025 Anamo Subscription Software Licenses and End User License Agreement EULA Ver 01_01.pdf" target="_blank" download>
+                                Terms & Conditions
+                            </Link>
+                        </div> */}
                     </div>
                 </div>
                 <div className={styles.bottom}>

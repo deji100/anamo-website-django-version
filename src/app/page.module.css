@@ -12,7 +12,7 @@
 
 .get_started {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   padding: 15px 20px;
   background: #CC0001;
@@ -26,8 +26,16 @@
   z-index: 9;
 }
 
-.get_started.terms {
-  bottom: 20px;
+.terms {
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+}
+
+.terms:hover {
+  background: #FF0000;
+  color: #fff;
 }
 
 .get_started:hover {
