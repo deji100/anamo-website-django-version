@@ -52,7 +52,7 @@ export default function Home({ styles }) {
         setSubmit(true)
 
         try {
-            const url = `${process.env.NEXT_PUBLIC_DOMAIN_NAME}/getting_started`
+            const url = `${process.env.NEXT_PUBLIC_DOMAIN_NAME}getting_started`
             const resp = await fetch(url, {
                 method: "POST",
                 headers: {
